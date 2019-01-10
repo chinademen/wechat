@@ -1,0 +1,3 @@
+<view class="rule" hover-class="none" hover-stop-propagation="false">
+   <image class="ruleBg" src="../../image/rule/ruleBg.png"></image>
+</view>

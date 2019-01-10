@@ -1,0 +1,49 @@
+.mianMeun{
+    background-color: rgba(162, 169, 175, 0);
+    box-shadow: 0px 8px 50px 0px rgba(98, 57, 40, 0.1);
+    overflow: hidden;
+    display: flex;
+    padding: 0 20rpx;
+}
+.mianMeun>view{
+   font-size: 26rpx;
+   color: #cacaca;
+   text-align: center;
+   padding: 30rpx 0;
+   flex: 1;
+   position: relative;
+}
+.mianMeun>view.active{
+    color: #806458;
+}
+.mianMeun>view.borBotom::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background-color: rgb(128, 100, 88);
+    width: 26rpx;
+    height: 4rpx;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+}
+.mainViewBox>.h3{
+    font-size: 40rpx;
+    color: #363636;
+}
+.mainViewBox>.table{
+    display: flex;
+}
+.mainViewBox>.table>.table_cell{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.mainViewBox>.table>.table_cell>.round{
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 10rpx 40rpx 0rpx rgba(128, 78, 57, 0.1);
+    width: 168rpx;
+    height: 167rpx;
+}
+

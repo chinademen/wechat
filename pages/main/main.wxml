@@ -1,0 +1,23 @@
+<view class="main" hover-class="none" hover-stop-propagation="false">
+    <view class="mianMeun" hover-class="none" hover-stop-propagation="false">
+        <view class="active borBotom">旧衣信息</view>
+        <view class="photo">拍照</view>
+        <view class="">翻改款式</view>
+        <view class="">填写地址</view>
+        <view class="">确认订单</view>
+    </view>
+</view>
+<!-- 旧衣信息 -->
+<view class="oldClothes mainViewBox">
+    <view class="gender h3">性别</view>
+    <view class="choose table">
+        <view class="table_cell">
+            <view class="round"></view>
+            <span>男士</span>
+        </view>
+        <view class="table_cell">
+            <view class="round"></view>
+            <span>女士</span>
+        </view>
+    </view>
+</view>

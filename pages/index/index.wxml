@@ -1,0 +1,30 @@
+<!-- index.wxml -->
+<view class="home">
+  <image class="homeBg" src="../../image/home/homeBg.png"></image>
+  <view class="homeMain">
+    <image class="homeBanner" src="../../image/home/banner.png"></image>
+    <view class="homeMeun">
+      <view class="homeMeun_rule" bindtap="bindViewTap">
+        <image class="homeMeun_rule_img" src="../../image/home/rule.png"></image>
+        <span>规则</span>
+      </view>
+      <view class="homeMeun_order">
+        <image class="homeMeun_order_img" src="../../image/home/order.png"></image>
+        <span>订单</span>
+      </view>
+    </view>
+    <view class="homeBtn">
+      <button class="tip" bindtap="showModal">活动介绍</button>
+      <button class="btn">填写我的旧衣信息</button>
+      <image class="homeLogo" src="../../image/home/logo.png"></image>
+      <view class="word">服务细则：目前改衣服仅受理含有“鄂尔多斯”、“ERDOS”、和“鄂尔多斯1980”标识的成人羊绒衫</view>
+    </view>
+  </view>
+  <view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
+    <view class="modals-cancel" bindtap="hideModal"></view>
+    <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
+      <image src="../../image/home/modul.png"></image>
+      <image class="close" src="../../image/home/close.png" bindtap="hideModal"></image>
+    </view>
+  </view>
+</view>
