@@ -1,4 +1,6 @@
 {
     "navigationBarTitleText": "鄂尔多斯",
-    "usingComponents": {}
+    "usingComponents": {
+        "cropper": "../../component/cropper/cropper"
+    }
 }
