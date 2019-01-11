@@ -1,0 +1,104 @@
+.mainViewBox{
+    padding: 60rpx 40rpx;
+    border-bottom: 1px solid #e3e3e3;
+}
+.mainViewBox>.h3{
+    font-size: 40rpx;
+    color: #363636;
+    margin-bottom: 70rpx;
+}
+.mainViewBox>.table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainViewBox>.table>.table_cell{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mainViewBox>.table>.table_cell>span{
+    color: #7e7e7e;
+    font-size: 26rpx;
+}
+.mainViewBox>.table>.table_cell>.round{
+    border-radius: 50%;
+    width: 216rpx;
+    height: 216rpx;
+}
+.mainViewBox>.table>.table_cell>.round>image{
+    width: 216rpx;
+    height: 216rpx;
+}
+
+.linxing{
+    padding: 60rpx 0rpx;
+}
+.linxing>.h3{
+    padding: 0rpx 40rpx;
+}
+.mainInput>.table>.table_cell>.round{
+    border-radius: 50%;
+    width: 358rpx;
+    height: 358rpx;
+}
+.mainInput>.table>.table_cell>.round>image{
+    width: 358rpx;
+    height: 358rpx;
+}
+
+.scroll-view_H{
+    white-space: nowrap;
+}
+.scroll-view-item_b{
+    display: inline-block;
+    margin: 0 20rpx;
+}
+.scroll-view-item_b>.word{
+    color: #f3ba5e;
+    font-size: 26rpx;
+    text-align: center;
+    margin-top: 18rpx;
+}
+.scroll-view-item_H {
+    border-radius: 50%;
+    background-color: rgb(240, 229, 214);
+    box-shadow: 0px 0px 1rpx 0rpx rgba(128, 100, 88, 0.7);
+    width: 283rpx;
+    height: 282rpx;
+    overflow: hidden;
+    position: relative;
+}
+.scroll-view-item_H>image{
+    position: absolute;
+    width: 235rpx;
+    height: 293rpx;
+    top: 90rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.mainBtn{
+    padding-bottom: 70rpx;
+}
+
+.mainBtn>button{
+    background-color: rgb(128, 100, 88);
+    box-shadow: 0px 7px 25px 0px rgba(158, 129, 116, 0.5);
+    width: 550rpx;
+    height: 90rpx;
+    border: none;
+    border-radius: 90rpx;
+    font-size: 34rpx;
+    color: #fff;
+}
+.mainBtn>.word{
+    font-size: 26rpx;
+    color: #cacaca;
+    text-align: center;
+    margin: 10rpx 0 40rpx 0;
+}
+  

@@ -33,10 +33,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-    width: device.windowWidth * 0.8,                //剪裁框的宽度
-    height: device.windowWidth * 0.8 / (102 / 152), //剪裁框的长度
-    // width: 666,                                     //剪裁框的宽度
-    // height: 666,                                      //剪裁框的长度
+    width: device.windowWidth ,                     //剪裁框的宽度
+    height: device.windowWidth ,                    //剪裁框的长度
     originImg: null,                                //存放原图信息
     stv: {
       offsetX: 0,                                   //剪裁图片左上角坐标x
@@ -125,10 +123,8 @@ Component({
             _this.setData({
               originImg: {
                 url: url,
-                // width: _this.data.width,
-                // height: _this.data.width / innerAspectRadio
-                width: _this.data.width * 0.8,
-                height: _this.data.width * 0.8 / innerAspectRadio
+                width: _this.data.width,
+                height: _this.data.width / innerAspectRadio
               },
               stv: {
                 offsetX: 0,
@@ -143,10 +139,8 @@ Component({
             _this.setData({
               originImg: {
                 url: url,
-                // height: _this.data.height,
-                // width: _this.data.height * innerAspectRadio
-                width: _this.data.height * 0.8,
-                height: _this.data.height * innerAspectRadio * 0.8
+                height: _this.data.height,
+                width: _this.data.height * innerAspectRadio
               },
               stv: {
                 offsetX: 0 - Math.abs((_this.data.width - _this.data.height * innerAspectRadio) / 2),

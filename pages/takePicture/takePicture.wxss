@@ -1,0 +1,89 @@
+.mainViewBox{
+    padding: 60rpx 40rpx;
+    border-bottom: 1px solid #e3e3e3;
+}
+.mainViewBox>.h3{
+    font-size: 40rpx;
+    color: #363636;
+    margin-bottom: 70rpx;
+}
+.mainViewBox>.table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainViewBox>.table>.table_cell{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mainViewBox>.table>.table_cell>span{
+    color: #7e7e7e;
+    font-size: 26rpx;
+}
+.mainViewBox>.table>.table_cell>.round{
+    border-radius: 50%;
+    width: 216rpx;
+    height: 216rpx;
+}
+.mainViewBox>.table>.table_cell>.round>image{
+    width: 216rpx;
+    height: 216rpx;
+}
+
+.takePhotoMain{
+    padding: 60rpx 0 ;
+    border-bottom: 1px solid #e3e3e3;
+    text-align: center;
+}
+
+
+.takePhotoMain .photoBox{
+    border-width: 5rpx;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 20rpx;
+    background-color: rgb(128, 100, 88);
+    box-shadow: 0px 0px 41rpx 0px rgba(180, 180, 180, 0.5);
+    width: 390rpx;
+    height: 390rpx;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+.takePhotoMain .zhengmian,.beimian{
+    width: 400rpx;
+    height: 400rpx;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/* .takePhotoMain .zhengmianBtn{
+    width: 478rpx;
+    height: 112rpx;
+    margin-top: 50rpx;
+} */
+.takePhotoMain .beimianBtn,.zhengmianBtn{
+    width: 418rpx;
+    height: 112rpx;
+    margin-top: 50rpx;
+}
+.takePhotoMain .gengduo{
+    width: 478rpx;
+    height: 112rpx;
+}
+.takePhotoMain .word{
+    color: #cacaca;
+    font-size: 26rpx;
+}
+.takePhotoMain>button {
+    background-color: rgb(128, 100, 88);
+    box-shadow: 0px 7rpx 25rpx 0px rgba(158, 129, 116, 0.5);
+    width: 550rpx;
+    height: 90rpx;
+    color: #fff;
+    border-radius: 90rpx;
+}

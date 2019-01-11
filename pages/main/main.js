@@ -3,7 +3,8 @@ Page({
   data: {
     ratio: 102 / 152,
     originUrl: '',
-    cropperResult: "../../image/main/zheng.png"
+    cropperResult: "../../image/main/zheng.png",
+    currentPage:1 
   },
   uploadTap() {
     let _this = this

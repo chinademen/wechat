@@ -1,0 +1,22 @@
+<!-- 拍照 -->
+<view class="mainContent takePhoto">
+    <view class="takePhotoMain">
+        <view class="photoBox">
+            <image class="zhengmian" src="{{ url }}"></image>
+        </view>
+        <image bindtap='uploadTap' class="zhengmianBtn" src="../../image/main/btn1.png"></image>
+    </view>
+    <view class="takePhotoMain">
+        <view class="photoBox" hover-class="none" hover-stop-propagation="false">
+            <image class="beimian" src="../../image/main/bei.png"></image>
+        </view>
+        <image class="beimianBtn" src="../../image/main/btn2.png"></image>
+    </view>
+    <view class="takePhotoMain">
+        <image class="gengduo" src="../../image/main/btn3.png"></image>
+        <view class="word">（若您的旧衣上有瑕疵破洞请拍摄更多照片，以便参考）</view>
+    </view>
+    <view class="takePhotoMain">
+        <button>下一步</button>
+    </view>
+</view>

@@ -2,7 +2,7 @@
 <view class='cropper' wx:if="{{originUrl}}">
     <cropper bind:getCropperImg="getCropperImg" url="{{ originUrl }}" ratio="{{ ratio }}"></cropper>
 </view>
-<view wx:else >
+<view wx:else>
     <view class="main" hover-class="none" hover-stop-propagation="false">
         <view class="mianMeun" hover-class="none" hover-stop-propagation="false">
             <view class="active borBotom">旧衣信息</view>
@@ -12,119 +12,9 @@
             <view class="">确认订单</view>
         </view>
     </view>
-    <!-- 旧衣信息 -->
-    <view class="mainContent oldClothes">
-        <view class="mainViewBox">
-            <view class="gender h3">性别</view>
-            <view class="choose table">
-                <view class="table_cell">
-                    <view class="round">
-                        <image class="notActive" src="../../image/main/sex1.png"></image>
-                    </view>
-                    <span>男士</span>
-                </view>
-                <view class="table_cell">
-                    <view class="round">
-                        <image class="notActive" src="../../image/main/sex2.png"></image>
-                    </view>
-                    <span>女士</span>
-                </view>
-            </view>
-        </view>
-        <view class="mainViewBox">
-            <view class="gender h3">性别</view>
-            <view class="choose table">
-                <view class="table_cell">
-                    <view class="round">
-                        <image class="notActive" src="../../image/main/type1.png"></image>
-                    </view>
-                    <span>套衫</span>
-                </view>
-                <view class="table_cell">
-                    <view class="round">
-                        <image class="notActive" src="../../image/main/type2.png"></image>
-                    </view>
-                    <span>开衫</span>
-                </view>
-            </view>
-        </view>
-        <view class="mainViewBox linxing">
-            <view class="gender h3">领型</view>
-            <view class="choose table">
-                <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
-                    <view class="scroll-view-item_b">
-                        <view class="scroll-view-item_H bc_v">
-                            <image class="notActive" src="../../image/main/v.png"></image>
-                        </view>
-                        <view class="word">V领</view>
-                    </view>
-                    <view class="scroll-view-item_b">
-                        <view class="scroll-view-item_H bc_v">
-                            <image class="notActive" src="../../image/main/b.png"></image>
-                        </view>
-                        <view class="word">圆领</view>
-                    </view>
-                    <view class="scroll-view-item_b">
-                        <view class="scroll-view-item_H bc_v">
-                            <image class="notActive" src="../../image/main/yi.png"></image>
-                        </view>
-                        <view class="word">半高领</view>
-                    </view>
-                    <view class="scroll-view-item_b">
-                        <view class="scroll-view-item_H bc_v">
-                            <image class="notActive" src="../../image/main/y.png"></image>
-                        </view>
-                        <view class="word">樽领</view>
-                    </view>
-                    <view class="scroll-view-item_b">
-                        <view class="scroll-view-item_H bc_v">
-                            <image class="notActive" src="../../image/main/z.png"></image>
-                        </view>
-                        <view class="word">一字领</view>
-                    </view>
-                </scroll-view>
-            </view>
-        </view>
-        <view class="mainViewBox mainInput">
-            <view class="gender h3">胸围与身长</view>
-            <view class="choose table">
-                <view class="table_cell">
-                    <view class="round">
-                        <image class="notActive" src="../../image/main/input1.png"></image>
-                    </view>
-                </view>
-                <view class="table_cell">
-                    <view class="round">
-                        <image class="notActive" src="../../image/main/input2.png"></image>
-                    </view>
-                </view>
-            </view>
-        </view>
-        <view class="mainBtn">
-            <view class="word">请正确填写全部信息</view>
-            <button>下一页</button>
-        </view>
-    </view>
-    <!-- 拍照 -->
-    <view class="mainContent takePhoto">
-        <view class="takePhotoMain">
-            <view class="photoBox">
-                <image class="zhengmian" src="{{ cropperResult }}" ></image>
-            </view>
-            <image bindtap='uploadTap' class="zhengmianBtn" src="../../image/main/btn1.png"></image>
-        </view>
-        <view class="takePhotoMain">
-            <view class="photoBox" hover-class="none" hover-stop-propagation="false">
-                <image class="beimian" src="../../image/main/bei.png"></image>
-            </view>
-            <image class="beimianBtn" src="../../image/main/btn2.png"></image>
-        </view>
-        <view class="takePhotoMain">
-            <image class="gengduo" src="../../image/main/btn3.png"></image>
-            <view class="word">（若您的旧衣上有瑕疵破洞请拍摄更多照片，以便参考）</view>
-        </view>
-        <view class="takePhotoMain">
-            <button>下一步</button>
-        </view>
-    </view>
+    <oldClothes wx:if="{{ currentPage == 1}}"></oldClothes>
+    <takePicture url="{{ cropperResult }}" wx:elif="{{currentPage == 2}}"></takePicture>
+    <turnStyle wx:elif="{{currentPage == 3}}"></turnStyle>
+    <address wx:elif="{{currentPage == 4}}"></address>
+    <sureOrder wx:elif="{{currentPage == 5}}"></sureOrder>
 </view>

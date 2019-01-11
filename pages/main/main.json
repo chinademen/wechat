@@ -1,6 +1,11 @@
 {
     "navigationBarTitleText": "鄂尔多斯",
     "usingComponents": {
-        "cropper": "../../component/cropper/cropper"
+        "cropper": "../../component/cropper/cropper",
+        "oldClothes": "../oldClothes/oldClothes",
+        "takePicture": "../takePicture/takePicture",
+        "turnStyle": "../turnStyle/turnStyle",
+        "address": "../address/address",
+        "sureOrder": "../sureOrder/sureOrder"
     }
 }
