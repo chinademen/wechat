@@ -1,20 +1,14 @@
-<!-- 照相机功能 -->
-<view class='cropper' wx:if="{{originUrl}}">
-    <cropper bind:getCropperImg="getCropperImg" url="{{ originUrl }}" ratio="{{ ratio }}"></cropper>
-</view>
-<view wx:else>
-    <view class="main" hover-class="none" hover-stop-propagation="false">
-        <view class="mianMeun" hover-class="none" hover-stop-propagation="false">
-            <view class="active borBotom">旧衣信息</view>
-            <view class="photo">拍照</view>
-            <view class="">翻改款式</view>
-            <view class="">填写地址</view>
-            <view class="">确认订单</view>
-        </view>
+<view class="main" hover-class="none" hover-stop-propagation="false">
+    <view class="mianMeun" hover-class="none" hover-stop-propagation="false">
+        <view class="active borBotom">旧衣信息</view>
+        <view class="photo">拍照</view>
+        <view class="">翻改款式</view>
+        <view class="">填写地址</view>
+        <view class="">确认订单</view>
     </view>
-    <oldClothes wx:if="{{ currentPage == 1}}"></oldClothes>
-    <takePicture url="{{ cropperResult }}" wx:elif="{{currentPage == 2}}"></takePicture>
-    <turnStyle wx:elif="{{currentPage == 3}}"></turnStyle>
-    <address wx:elif="{{currentPage == 4}}"></address>
-    <sureOrder wx:elif="{{currentPage == 5}}"></sureOrder>
 </view>
+<oldClothes wx:if="{{ currentPage == 1}}"></oldClothes>
+<takePicture url="{{ cropperResult }}" wx:elif="{{currentPage == 2}}"></takePicture>
+<turnStyle wx:elif="{{currentPage == 3}}"></turnStyle>
+<address wx:elif="{{currentPage == 4}}"></address>
+<sureOrder wx:elif="{{currentPage == 5}}"></sureOrder>

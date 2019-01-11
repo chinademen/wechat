@@ -1,8 +1,15 @@
+
+
+<!-- 照相机功能 -->
+<view class='cropper' wx:if="{{originUrl}}">
+    <cropper bind:getCropperImg="getCropperImg" url="{{ originUrl }}" ratio="{{ ratio }}"></cropper>
+</view>
+
 <!-- 拍照 -->
-<view class="mainContent takePhoto">
+<view wx:else class="mainContent takePhoto">
     <view class="takePhotoMain">
         <view class="photoBox">
-            <image class="zhengmian" src="{{ url }}"></image>
+            <image class="zhengmian" src="{{ cropperResult }}"></image>
         </view>
         <image bindtap='uploadTap' class="zhengmianBtn" src="../../image/main/btn1.png"></image>
     </view>
