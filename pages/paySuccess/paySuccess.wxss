@@ -44,7 +44,7 @@
     border-radius: 20rpx;
     position: absolute;
     bottom: 375rpx;
-    left: 50%;
+    left: 50%; 
     transform: translateX(-50%);
     width: 706rpx;
     height: 699rpx;
