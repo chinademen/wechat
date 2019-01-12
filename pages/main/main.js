@@ -1,6 +1,6 @@
 
 Page({
   data: {
-    currentPage:4, 
+    currentPage:5, 
   },
 })

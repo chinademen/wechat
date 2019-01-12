@@ -1,1 +1,84 @@
-/* pages/sureOrder/sureOrder.wxss */
+.send_type{
+    padding: 40rpx 0 0 0;
+    border-bottom: 1rpx solid rgb(227,227,227);
+}
+.send_type>h3{
+    font-size: 34rpx;
+    color: #363636;
+    margin-bottom: 40rpx;
+    display: block;
+    padding: 0 30rpx;
+}
+.send_type>p{
+    display: block;
+    color: #363636;
+    font-size: 30rpx;
+    margin-bottom: 30rpx;
+    padding: 0 30rpx;
+}
+.send_gc{
+    display: flex;
+    margin-bottom: 60rpx;
+    padding: 0 30rpx;
+}
+.send_gc>text:nth-child(1){
+    color: #363636;
+    font-size: 30rpx;
+}
+.send_gc>text:nth-child(2){
+    flex: 1;
+    font-size: 30rpx;
+    color: #7e7e7e;
+}
+.send_sh{
+    background: #f8f8f8;
+    padding: 30rpx;
+    color: #7e7e7e;
+    font-size: 30rpx;
+}
+.send_sh>p{
+    display: block;
+    margin-top: 30rpx;
+}
+.send_sh .name{
+    margin-right: 60rpx;
+}
+.send_radio{
+    padding: 30rpx 0;
+    display: flex;
+    align-items: center;
+}
+.send_radio>label{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.send_radio span{
+    font-size: 30rpx;
+    color: #7e7e7e;
+}
+.sureOrder_tip>p{
+    display: block;
+    text-align: center;
+}
+.sureOrder_tip>p:nth-child(1){
+    color: #7e7e7e;
+    font-size: 28rpx;
+    margin: 30rpx 0 60rpx 0;
+}
+.sureOrder_tip>p:nth-child(2){
+    color: #7e7e7e;
+    font-size: 24rpx;
+}
+.sureOrder_btn>button{
+    color: #fff;
+    font-size: 34rpx;
+    background-color: rgb(128, 100, 88);
+    box-shadow: 0px 5rpx 24rpx 0rpx rgba(153, 153, 153, 0.36);
+    width: 550rpx;
+    height: 90rpx;
+    border-radius: 90rpx;
+    margin: 30rpx auto 80rpx;
+  
+}

@@ -1,0 +1,12 @@
+<view class="address_content">
+    <image src="../../image/main/example.png"></image>
+    <view class="word">
+        <span>翻改款式</span>
+        <span>圆领套衫,130/64</span>
+        <span>
+            ￥300
+            <i>(3000积分)</i>
+        </span>
+    </view>
+    <image src="../../image/main/btn.png"></image>
+</view>

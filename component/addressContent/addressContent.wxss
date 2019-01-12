@@ -1,0 +1,36 @@
+.address_content{
+    padding: 80rpx 50rpx;
+    display: flex;
+    border-bottom: 1rpx solid rgb(227,227,227);
+}
+.address_content>image{
+    width: 144rpx;
+    height: 144rpx;
+}
+.address_content>.word{
+    flex: 1;
+    padding: 0 20rpx;
+}
+.address_content>.btn{
+    width: 98rpx;
+    height: 98rpx;
+}
+.address_content>.word>span{
+    display: block;
+}
+.address_content>.word>span:nth-child(1){
+    font-size: 26rpx;
+    color: #7e7e7e;
+}
+.address_content>.word>span:nth-child(2){
+    font-size: 30rpx;
+    color: #363636;
+}
+.address_content>.word>span:nth-child(3){
+    font-size: 28rpx;
+    color: #ff5d5d;
+    margin-top: 32rpx;
+}
+.address_content>.word>span>i{
+    color: #cacaca;
+}

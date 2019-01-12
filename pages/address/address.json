@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "填写地址",
-  "usingComponents": {}
+  "usingComponents": {
+    "addressContent": "../../component/addressContent/addressContent"
+  }
 }

@@ -1,2 +1,37 @@
-<!--pages/sureOrder/sureOrder.wxml-->
-<text>pages/sureOrder/sureOrder.wxml</text>
+<view class="sureOrder">
+    <addressContent></addressContent>
+    <view class="send_type">
+        <h3>寄送方式</h3>
+        <p>自行快递</p>
+        <view class="send_gc">
+            <text class="">工厂地址:</text>
+            <text class="">北京市西城区西单北街176号汉光百货6层鄂尔多斯专柜汉光男装厅</text>
+        </view>
+        <h3>收货地址</h3>
+        <view class="send_sh">
+            <view class="">
+                <span class="name">李三</span>
+                <span class="photo">159*****253</span>
+            </view>
+            <p class="">北京市西城区西单北街176号汉光百货6层鄂尔多斯专柜汉光男装厅</p>
+            <p>收货时间不限</p>
+        </view>
+        <radio-group class="send_radio">
+            <label>
+                <radio value="积分抵扣" checked="a" />
+                <span> 积分抵扣 </span>
+            </label>
+            <label>
+                <radio value="优惠券抵扣" checked="b" />
+                <span> 优惠券抵扣 </span>
+            </label>
+        </radio-group>
+    </view>
+    <view class="sureOrder_tip">
+        <p>您现有2000积分，此次交易将使用2000积分抵扣</p>
+        <p>预计改衣周期为2-3周</p>
+    </view>
+    <view class="sureOrder_btn">
+        <button>付款</button>
+    </view>
+</view>
