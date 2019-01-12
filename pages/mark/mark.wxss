@@ -40,6 +40,19 @@
     transform: translate(-50%,-50%);
     z-index: -1;
 }
+.moveArea>.max>.tip{
+    position: absolute;
+    top: -35rpx;
+    left: 50%;
+    white-space: nowrap;
+    background-color: rgb(96, 96, 96);
+    height: 30rpx;
+    line-height: 30rpx;
+    border-radius: 6rpx;
+    padding: 0 10rpx;
+    transform: translateX(-50%);
+    font-size: 22rpx;
+}
 
 .markCard{
     border-width: 1rpx;
@@ -52,5 +65,55 @@
     height: 180rpx;
     margin: 0 auto;
     margin-top: 20rpx;
+    display: flex;
+    padding: 25rpx 0;
+}
+.markCard>.left{
+    width: 114rpx;
+    text-align: center;
+}
+.markCard>.left>image{
+    width: 40rpx;
+    height: 48rpx;
+}
+.markCard>.right{
+    flex: 1;
+}  
+.markCard>.right>.top{
+    overflow: hidden;
+}
+.markCard>.right>.input{
+    font-size: 30rpx;
+    color: #cacaca;
+    padding: 20rpx 0;
+    border-bottom: 1px solid rgb(227,227,227);
+}
+.markCard>.right .title{
+    font-size: 30rpx;
+    color: #7e7e7e;
+    float: left;
+}
+.markCard>.right .btn{
+    background-color: rgb(255, 93, 93);
+    width: 88rpx;
+    height: 35rpx;
+    border-radius: 35rpx;
+    line-height: 35rpx;
+    font-size: 22rpx;
+    color: #fff;
+    float: right;
+    text-align: center;
+    margin-right: 25rpx;
+}
+.markBtn>button {
+    background-color: rgb(128, 100, 88);
+    box-shadow: 0rpx 5rpx 24rpx 0rpx rgba(153, 153, 153, 0.36);
+    width: 550rpx;
+    height: 90rpx;
+    color: #fff;
+    border-radius: 90rpx;
+    font-size: 34rpx;
+    margin: 35rpx auto 60rpx;
 }
   
+

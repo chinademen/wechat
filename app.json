@@ -1,12 +1,13 @@
 {
   "pages":[
     "pages/mark/mark",
+    "pages/login/login",
     "pages/paySuccess/paySuccess",
     "pages/index/index",
     "pages/oldClothes/oldClothes",
     "pages/main/main",
-    "pages/rule/rule",
-    "pages/login/login"
+    "pages/rule/rule"
+   
   ],
   "window":{
     "backgroundTextStyle":"light",

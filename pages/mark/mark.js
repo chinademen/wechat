@@ -6,17 +6,15 @@ Page({
    */
   data: {
     mark1:{
-      x: 86,
-      y: 183,
+      x: 125,
+      y: 125,
     },
-    mark2:{
-      x: 126,
-      y: 138,
-    },
-    mark3:{
-      x: 83,
-      y: 89,
-    },
+    inputValue1:''
+  },
+  bindKeyInput(e) {
+    this.setData({
+      inputValue1: e.detail.value
+    })
   },
 
   /**

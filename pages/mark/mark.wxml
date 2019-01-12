@@ -6,14 +6,7 @@
             <movable-view x="{{mark1.x}}" y="{{mark1.y}}" class="max" direction="all">
                 <image class="" src="../../image/markcutter/cuterrBg.png"></image>
                 1
-            </movable-view>
-            <movable-view x="{{mark2.x}}" y="{{mark2.y}}" class="max" direction="all">
-                <image class="" src="../../image/markcutter/cuterrBg.png"></image>
-                2
-            </movable-view>
-            <movable-view x="{{mark3.x}}" y="{{mark3.y}}" class="max" direction="all">
-                <image class="" src="../../image/markcutter/cuterrBg.png"></image>
-                3
+                <view wx:if="{{ inputValue1 }}" class="tip"> {{inputValue1}} </view>
             </movable-view>
         </movable-area>
     </view>
@@ -21,5 +14,21 @@
 </view>
 
 <view class="markCard" >
-    
+    <view class="left" >
+        <image class="" src="../../image/markcutter/title.png"></image>
+    </view>
+    <view class="right" >
+         <view class="top" >
+             <span class="title" >
+                 标注1 :
+             </span>
+             <span class="btn" >
+                 删除
+             </span>
+         </view>   
+         <input class="input" bindinput="bindKeyInput" placeholder-style="color:#cacaca" type="text" placeholder="请填写详情内容" />
+    </view>
+</view>
+<view class="markBtn" >
+    <button> 确认提交 </button>
 </view>
