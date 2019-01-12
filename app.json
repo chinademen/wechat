@@ -1,15 +1,17 @@
 {
   "pages":[
-    
     "pages/paySuccess/paySuccess",
     "pages/main/main",
     "pages/index/index",
-    "pages/rule/rule"
+    "pages/oldClothes/oldClothes",
+    "pages/main/main",
+    "pages/rule/rule",
+    "pages/login/login"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "鄂尔多斯1980",
     "navigationBarTextStyle":"black"
   }
 }

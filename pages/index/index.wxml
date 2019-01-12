@@ -15,7 +15,7 @@
     </view>
     <view class="homeBtn">
       <button class="tip" bindtap="showModal">活动介绍</button>
-      <button class="btn">填写我的旧衣信息</button>
+      <button class="btn" bindtap="next">填写我的旧衣信息</button>
       <image class="homeLogo" src="../../image/home/logo.png"></image>
       <view class="word">服务细则：目前改衣服仅受理含有“鄂尔多斯”、“ERDOS”、和“鄂尔多斯1980”标识的成人羊绒衫</view>
     </view>
@@ -26,5 +26,16 @@
       <image src="../../image/home/modul.png"></image>
       <image class="close" src="../../image/home/close.png" bindtap="hideModal"></image>
     </view>
+  </view>
+</view>
+
+<view class="authorization fixed" wx:if="{{showBindPhone}}">
+  <view class="ab"></view>
+  <view class="ab content">
+
+    <icon size="50" type="warn"></icon>
+    <view>您还未绑定手机</view>
+
+    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">立即绑定</button>
   </view>
 </view>
