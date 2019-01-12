@@ -1,1 +1,111 @@
-/* pages/address/address.wxss */
+.address_content{
+    padding: 80rpx 50rpx;
+    display: flex;
+    border-bottom: 1rpx solid rgb(227,227,227);
+}
+.address_content>image{
+    width: 144rpx;
+    height: 144rpx;
+}
+.address_content>.word{
+    flex: 1;
+    padding: 0 20rpx;
+}
+.address_content>.btn{
+    width: 98rpx;
+    height: 98rpx;
+}
+.address_content>.word>span{
+    display: block;
+}
+.address_content>.word>span:nth-child(1){
+    font-size: 26rpx;
+    color: #7e7e7e;
+}
+.address_content>.word>span:nth-child(2){
+    font-size: 30rpx;
+    color: #363636;
+}
+.address_content>.word>span:nth-child(3){
+    font-size: 28rpx;
+    color: #ff5d5d;
+    margin-top: 32rpx;
+}
+.address_content>.word>span>i{
+    color: #cacaca;
+}
+
+.address_radio{
+    padding: 40rpx 30rpx;
+    border-bottom: 1rpx solid rgb(227,227,227);
+}
+.address_radio>h3{
+    font-size: 34rpx;
+    color: #363636;
+}
+.address_radio>.radio{
+    display: flex;
+    margin-top: 40rpx;
+}
+.address_radio>.radio>label{
+    flex: 1;
+    font-size: 30rpx;
+    color: #7e7e7e;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.address_detail{
+    padding: 30rpx;
+    border-bottom: 1rpx solid rgb(227,227,227);
+}
+.address_detail>.address_gc{
+    display: flex;
+}
+.address_detail>.address_gc>text{
+    font-size: 30rpx;
+    color: #7e7e7e;
+}
+.address_detail>.address_gc>text:nth-child(2){
+    flex: 1;
+}
+.address_detail>.address_tip{
+    display: block;
+    color: #cacaca;
+    font-size: 24rpx;
+    text-align: center;
+    margin-top: 30rpx;
+    margin-bottom: 60rpx;
+}
+.address_detail>h3{
+    font-size: 34rpx;
+    color: #363636;
+}
+.address_detail>.wirte{
+    display: flex;
+    align-items: center;
+    margin-top: 43rpx;
+}
+.address_detail>.wirte>span{
+    flex: 1;
+    color: #7e7e7e;
+    font-size: 28rpx;
+}
+.address_detail>.wirte>image{
+    width: 13rpx;
+    height: 23rpx;
+}
+.address_btn{
+    padding: 80rpx 0;
+}
+.address_btn>button{
+    background-color: rgb(128, 100, 88);
+    box-shadow: 0px 5rpx 24rpx 0rpx rgba(153, 153, 153, 0.36);
+    width: 550rpx;
+    height: 90rpx;
+    border: none;
+    border-radius: 90rpx;
+    color: #fff;
+}
+  

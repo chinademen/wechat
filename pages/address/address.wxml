@@ -1,2 +1,42 @@
-<!--pages/address/address.wxml-->
-<text>pages/address/address.wxml</text>
+<view class="address">
+    <view class="address_content">
+        <image src="../../image/main/example.png"></image>
+        <view class="word">
+            <span>翻改款式</span>
+            <span>圆领套衫,130/64</span>
+            <span>
+                ￥300
+                <i>(3000积分)</i>
+            </span>
+        </view>
+        <image src="../../image/main/btn.png"></image>
+    </view>
+    <view class="address_radio">
+        <h3>寄送方式</h3>
+        <radio-group class="radio">
+            <label>
+                <radio value="自行快递" checked="a" />
+                自行快递
+            </label>
+            <label>
+                <radio value="门店提交" checked="b" />
+                门店提交
+            </label>
+        </radio-group>
+    </view>
+    <view class="address_detail">
+        <view class="address_gc">
+            <text class="">工厂地址:</text>
+            <text class=""> 北京市西城区西单北街176号汉光百货6层鄂尔多斯专柜汉光男装厅</text>
+        </view>
+        <text class="address_tip">邮寄完成后需自行在“我的订单”中填写订单号</text>
+        <h3> 收货地址 </h3>
+        <view class="wirte" >
+            <span> 请填写你的收货地址 </span>
+            <image src="../../image/main/more.png"></image>
+        </view>
+    </view>
+    <view class="address_btn">
+        <button>生成订单</button>
+    </view>
+</view>
