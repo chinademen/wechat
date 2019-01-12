@@ -3,16 +3,13 @@
 const app = getApp()
 Page({
   data: {
-    hideModal: true, //模态框的状态  true-隐藏  false-显示
-    animationData: {},//
-    showBindPhone:false
+    hideModal1: true, //模态框的状态  true-隐藏  false-显示
+    hideModal2: true, //模态框的状态  true-隐藏  false-显示
+    showBindPhone: false
   },
-  onLoad: function (e) {
-    
-  },
-  getPhoneNumber: function(e){
-    var that= this;
-    if (e.detail.errMsg =='getPhoneNumber:fail user deny'){
+  getPhoneNumber: function (e) {
+    var that = this;
+    if (e.detail.errMsg == 'getPhoneNumber:fail user deny') {
       wx.showModal({
         title: '提示',
         content: '绑定手机号码可以更好的为您服务',
@@ -21,54 +18,50 @@ Page({
         success(res) {
         }
       })
-    }else{
-        wx.request({
-          url: app.url+'weiapp/api/getPhonenumber',
-          data: {
-            iv: e.detail.iv,
-            encryptedData: e.detail.encryptedData,
-            PHPSESSID: wx.getStorageSync('PHPSESSID')
-          },
-          success: function (res) {
-            var data = res.data.data;
-            if (data.mobile){        
-             
-              wx.setStorageSync("mobile", data.mobile)
-              wx.setStorageSync("score", data.score)
-              that.setData({
-                showBindPhone: false
-              })
-          
-            }else{
-              app.error('绑定失败');
-            }
-            
-          },
-          complete:function(res){
-            console.log('complete')
-            console.log(res)
+    } else {
+      wx.request({
+        url: app.url + 'weiapp/api/getPhonenumber',
+        data: {
+          iv: e.detail.iv,
+          encryptedData: e.detail.encryptedData,
+          PHPSESSID: wx.getStorageSync('PHPSESSID')
+        },
+        success: function (res) {
+          var data = res.data.data;
+          if (data.mobile) {
+
+            wx.setStorageSync("mobile", data.mobile)
+            wx.setStorageSync("score", data.score)
+            that.setData({
+              showBindPhone: false
+            })
+
+          } else {
+            app.error('绑定失败');
           }
-        })
-
-
-
+        },
+        complete: function (res) {
+          console.log('complete')
+          console.log(res)
+        }
+      })
     }
-
-
-
   },
   //填写旧衣信息
-  next: function(){
+  next: function () {
     var mobile = wx.getStorageSync('mobile');
-    if(!mobile){
-      this.setData({
-        showBindPhone: true
-      })
-    }else{
-      wx.navigateTo({
-        url: '/pages/oldClothes/oldClothes'
-      })
-    }
+    // if (!mobile) {
+    //   this.setData({
+    //     showBindPhone: true
+    //   })
+    // } else {
+    //   wx.navigateTo({
+    //     url: '../main/main'
+    //   })
+    // }
+    wx.navigateTo({
+      url: '../main/main'
+    })
   },
   //事件处理函数
   bindViewTap: function () {
@@ -77,49 +70,22 @@ Page({
     })
   },
   // 显示遮罩层
-  showModal: function () {
-    var that = this;
-    that.setData({
-      hideModal: false
+  showModal1: function () {
+    this.setData({
+      hideModal1: false
     })
-    var animation = wx.createAnimation({
-      duration: 400,//动画的持续时间 默认400ms   数值越大，动画越慢   数值越小，动画越快
-      timingFunction: 'ease',//动画的效果 默认值是linear
-    })
-    this.animation = animation
-    setTimeout(function () {
-      that.fadeIn();//调用显示动画
-    }, 400)
   },
-
   // 隐藏遮罩层
-  hideModal: function () {
-    var that = this;
-    var animation = wx.createAnimation({
-      duration: 400,//动画的持续时间 默认400ms   数值越大，动画越慢   数值越小，动画越快
-      timingFunction: 'ease',//动画的效果 默认值是linear
-    })
-    this.animation = animation
-    that.fadeDown();//调用隐藏动画   
-    setTimeout(function () {
-      that.setData({
-        hideModal: true
-      })
-    }, 400)//先执行下滑动画，再隐藏模块
-
-  },
-
-  //动画集
-  fadeIn: function () {
-    this.animation.opacity(1).translateY(`-50%`).step()
+  hideModal1: function () {
     this.setData({
-      animationData: this.animation.export()//动画实例的export方法导出动画数据传递给组件的animation属性
+      hideModal1: true,
+      hideModal2: false
     })
   },
-  fadeDown: function () {
-    this.animation.opacity(0).translateY(`-100%`).step()
+  // 隐藏遮罩层
+  hideModal2: function () {
     this.setData({
-      animationData: this.animation.export(),
+      hideModal2: true
     })
   },
 })

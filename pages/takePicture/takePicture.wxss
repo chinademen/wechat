@@ -51,6 +51,7 @@
     height: 390rpx;
     margin: 0 auto;
     position: relative;
+    overflow: hidden;
   }
   
 .takePhotoMain .zhengmian,.beimian{
@@ -86,4 +87,12 @@
     height: 90rpx;
     color: #fff;
     border-radius: 90rpx;
+}
+.cropper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
 }

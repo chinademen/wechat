@@ -1,14 +1,15 @@
 <view class="main" hover-class="none" hover-stop-propagation="false">
     <view class="mianMeun" hover-class="none" hover-stop-propagation="false">
-        <view class="active borBotom">旧衣信息</view>
-        <view class="photo">拍照</view>
-        <view class="">翻改款式</view>
-        <view class="">填写地址</view>
-        <view class="">确认订单</view>
+        <!-- active borBotom -->
+        <view class="{{ currentPage == 1?'active':'' }}">旧衣信息</view> 
+        <view class="{{ currentPage == 2?'active':'' }}">拍照</view>
+        <view class="{{ currentPage == 3?'active':'' }}">翻改款式</view>
+        <view class="{{ currentPage == 4?'active':'' }}">填写地址</view>
+        <view class="{{ currentPage == 5?'active':'' }}">确认订单</view>
     </view>
 </view>
-<oldClothes wx:if="{{ currentPage == 1}}"></oldClothes>
-<takePicture url="{{ cropperResult }}" wx:elif="{{currentPage == 2}}"></takePicture>
-<turnStyle wx:elif="{{currentPage == 3}}"></turnStyle>
-<address wx:elif="{{currentPage == 4}}"></address>
-<sureOrder wx:elif="{{currentPage == 5}}"></sureOrder>
+<oldClothes bind:changePage="changePage" wx:if="{{ currentPage == 1}}"></oldClothes>
+<takePicture bind:changePage="changePage" url="{{ cropperResult }}" wx:elif="{{currentPage == 2}}"></takePicture>
+<turnStyle bind:changePage="changePage" wx:elif="{{currentPage == 3}}"></turnStyle>
+<address bind:changePage="changePage" wx:elif="{{currentPage == 4}}"></address>
+<sureOrder bind:changePage="changePage" wx:elif="{{currentPage == 5}}"></sureOrder>

@@ -1,11 +1,13 @@
 {
   "pages":[
+    "pages/main/main",
+    "pages/index/index",
     "pages/mark/mark",
     "pages/login/login",
     "pages/paySuccess/paySuccess",
-    "pages/index/index",
+    
     "pages/oldClothes/oldClothes",
-    "pages/main/main",
+    
     "pages/rule/rule"
    
   ],

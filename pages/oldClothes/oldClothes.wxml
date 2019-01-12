@@ -88,6 +88,6 @@
     </view>
     <view class="mainBtn">
         <view class="word">请正确填写全部信息</view>
-        <button>下一页</button>
+        <button bindtap='changePage'>下一页</button>
     </view>
 </view>

@@ -24,6 +24,6 @@
         <view class="word">（若您的旧衣上有瑕疵破洞请拍摄更多照片，以便参考）</view>
     </view>
     <view class="takePhotoMain">
-        <button>下一步</button>
+        <button bindtap='changePage'>下一步</button>
     </view>
 </view>

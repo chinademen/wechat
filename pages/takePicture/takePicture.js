@@ -35,6 +35,9 @@ Component({
           cropperResult: e.detail.url
         })
       }
+    },
+    changePage(){
+      this.triggerEvent("changePage", { path: 3 })
     }
   }
 })

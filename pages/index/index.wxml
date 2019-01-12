@@ -1,4 +1,3 @@
-<!-- index.wxml -->
 <view class="home">
   <image class="homeBg" src="../../image/home/homeBg.png"></image>
   <view class="homeMain">
@@ -14,28 +13,43 @@
       </view>
     </view>
     <view class="homeBtn">
-      <button class="tip" bindtap="showModal">活动介绍</button>
+      <button class="tip" bindtap="showModal1">活动介绍</button>
       <button class="btn" bindtap="next">填写我的旧衣信息</button>
       <image class="homeLogo" src="../../image/home/logo.png"></image>
       <view class="word">服务细则：目前改衣服仅受理含有“鄂尔多斯”、“ERDOS”、和“鄂尔多斯1980”标识的成人羊绒衫</view>
     </view>
   </view>
-  <view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
-    <view class="modals-cancel" bindtap="hideModal"></view>
-    <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
-      <image src="../../image/home/modul.png"></image>
-      <image class="close" src="../../image/home/close.png" bindtap="hideModal"></image>
-    </view>
-  </view>
 </view>
-
 <view class="authorization fixed" wx:if="{{showBindPhone}}">
   <view class="ab"></view>
   <view class="ab content">
-
     <icon size="50" type="warn"></icon>
     <view>您还未绑定手机</view>
-
     <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">立即绑定</button>
   </view>
+</view>
+<!-- 弹框1 -->
+<view class="modals modals1" hidden="{{hideModal1}}">
+  <image src="../../image/home/modal1.png"></image>
+  <view class="title">活动介绍</view>
+  <view class="content">
+    <text class="">
+      “1117要一起”作为鄂尔多斯1980品牌一年一度的家庭日，以“大衣焕小衣”为“家”延续一份冬日的温暖。将历久弥新的温暖代代传承。由“衣”开始，“要一起”，一起传递温暖，传递“时光之礼”。
+    </text>
+  </view>
+  <view class="button" bindtap="hideModal1">确认</view>
+</view>
+<view class="modals modals2" hidden="{{hideModal2}}">
+  <image src="../../image/home/modal2.png"></image>
+  <view class="title">改衣规则和注意事项</view>
+  <view class="content">
+    <text class="">
+    1、请保持旧衣干净整洁。
+    2、请根据要求测量旧衣尺寸，并对照改衣尺码表和童装尺码表，确定需要修改的小衣尺码。若有破损也请测量并标记破损区域大小，以便工艺人员根据实际情况初步判定改衣效果。
+    3、请跟随指引拍摄并上传清晰的旧衣整体和细节图，包含脏污和破损的位置。
+    4、旧衣如有局部脏污或破损，工厂会首先对衣服进行清洗和修复（顽固油渍无法完全清除，工艺人员收到衣服后，会进行全面评估并提供相应方案）。 
+    5、为减少对旧衣的破坏，改衣以裁剪码边的方
+    </text>
+  </view>
+  <view class="button" bindtap="hideModal2">确认</view>
 </view>

@@ -14,12 +14,12 @@ Component({
   properties: {
     ratio: {
       type: Number,
-      observer: function (newVal, oldVal) {
-        this.setData({
-          width: device.windowWidth * 0.8,
-          height: device.windowWidth * 0.8 / newVal
-        })
-      }
+      // observer: function (newVal, oldVal) {
+      //   this.setData({
+      //     width: device.windowWidth * 0.8,
+      //     height: device.windowWidth * 0.8 / newVal
+      //   })
+      // }
     },
     url: {
       type: String,
@@ -33,8 +33,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-    width: device.windowWidth ,                     //剪裁框的宽度
-    height: device.windowWidth ,                    //剪裁框的长度
+    width: 664,                     //剪裁框的宽度
+    height: 664,                    //剪裁框的长度
     originImg: null,                                //存放原图信息
     stv: {
       offsetX: 0,                                   //剪裁图片左上角坐标x
@@ -60,13 +60,24 @@ Component({
       //     _this.initImg( res.tempFilePaths[0]);
       //   }
       // })
-      this.triggerEvent("getCropperImg", { url: null })
+      this.triggerEvent("getCropperImg", { url: '../../image/main/zheng.png' })
     },
     rotate() {
       let _this = this;
+      // _this.setData({
+      //   'stv.rotate': _this.data.stv.rotate % 90 == 0 ? _this.data.stv.rotate = _this.data.stv.rotate + 90 : _this.data.stv.rotate = 0
+      // })
       _this.setData({
-        'stv.rotate': _this.data.stv.rotate % 90 == 0 ? _this.data.stv.rotate = _this.data.stv.rotate + 90 : _this.data.stv.rotate = 0
+        stv: {
+          offsetX: 0,                                   //剪裁图片左上角坐标x
+          offsetY: 0,                                   //剪裁图片左上角坐标y
+          zoom: false,                                  //是否缩放状态
+          distance: 0,                                  //两指距离
+          scale: 1,                                     //缩放倍数
+          rotate: 0                                     //旋转角度
+        }
       })
+
     },
     // canvas剪裁图片
     cropperImg() {

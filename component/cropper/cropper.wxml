@@ -1,14 +1,18 @@
 <view class="container">
   <!-- 剪裁框与初始图片，剪裁框监听用户手势，获取移动缩放旋转值，images通过css样式显示变化 -->
   <view class="containerMain">
-    <view class="img" style="width:680rpx; height:680rpx" catchtouchstart="touchstartCallback" catchtouchmove="touchmoveCallback" catchtouchend="touchendCallback">
+    <view class="img"style="width:{{width}}rpx; height:{{width}}rpx;">
       <image style="transform: translate({{stv.offsetX}}rpx, {{stv.offsetY}}rpx) scale({{stv.scale}}) rotate({{ stv.rotate }}deg);width:{{originImg.width}}rpx; height: {{originImg.height}}rpx" src="{{ originImg.url }}"></image>
     </view>
+    <image src="../../image/main/rule.png" class="rule" catchtouchstart="touchstartCallback" catchtouchmove="touchmoveCallback" catchtouchend="touchendCallback" class="rule" style="width:680rpx; height:680rpx; z-index: 22;">
+      
+    </image>
   </view>
   <view class='footer'>
     <view bindtap='uploadTap'>
       <image class="notActive" src="../../image/main/canse.png"></image>
       <span>取消</span>
+      
     </view>
     <view bindtap='rotate'>
       <image class="notActive" src="../../image/main/rmote.png"></image>
