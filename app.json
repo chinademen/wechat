@@ -1,5 +1,7 @@
 {
   "pages":[
+    
+    "pages/paySuccess/paySuccess",
     "pages/main/main",
     "pages/index/index",
     "pages/rule/rule"

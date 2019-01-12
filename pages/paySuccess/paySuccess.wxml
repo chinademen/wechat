@@ -1,0 +1,30 @@
+<view class="pay">
+    <image bindtap='uploadTap' class="zhengmianBtn" src="../../image/pay/bg.png"></image>
+    <view class="pay_modul">
+        <view class="money">
+            <p>
+                <!-- <span>￥</span> -->
+                56.84
+            </p>
+            <p>使用积分:56.84</p>
+        </view>
+        <view class="content">
+            <image bindtap='uploadTap' class="zhengmianBtn" src="../../image/pay/exap.png"></image>
+            <view class="p">
+                <p>改衣</p>
+                <p>
+                    <text class="">款式 : </text>
+                    <text class="">圆领套衫</text>
+                </p>
+                <p>
+                    <text class="">尺码 : </text>
+                    <text class="">130/64</text>
+                </p>
+            </view>
+        </view>
+    </view>
+    <view class="pay_content">
+        <p>改衣时间预计为2-3周,请您耐心等待</p>
+        <button>完成</button>
+    </view>
+</view>
