@@ -1,0 +1,56 @@
+.markContent{
+    width: 683rpx;
+    height: 683rpx;
+    position: relative;
+    margin: 0 auto;
+}
+.markContent>image{
+    position: absolute;
+    width: 683rpx;
+    height: 683rpx;
+}
+.markContent>.orign,.moveArea{
+    position: absolute;
+    width: 598rpx;
+    height: 598rpx;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.mark>.tip{
+    text-align: center;
+    color: #cacaca;
+    font-size: 26rpx;
+}
+.moveArea>.max{
+    width: 59rpx;
+    height: 69rpx;
+    text-align: center;
+    line-height: 60rpx;
+    position: relative;
+    font-size: 22rpx;
+    color: #fff;
+}
+.moveArea>.max>image{
+    position: absolute;
+    width: 59rpx;
+    height: 69rpx;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+
+.markCard{
+    border-width: 1rpx;
+    border-color: rgb(227, 227, 227);
+    border-style: solid;
+    border-radius: 4rpx;
+    background-color: rgb(255, 255, 255);
+    /* box-shadow: 0rpx 7rpx 25rpx 0rpx rgba(158, 129, 116, 0.2); */
+    width: 657rpx;
+    height: 180rpx;
+    margin: 0 auto;
+    margin-top: 20rpx;
+}
+  

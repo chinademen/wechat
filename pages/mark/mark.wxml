@@ -1,0 +1,25 @@
+<view class="mark">
+    <view class="markContent">
+        <image class="bg" src="../../image/markcutter/bg.png"></image>
+        <image class="orign" src="../../image/markcutter/image.png"></image>
+        <movable-area class="moveArea">
+            <movable-view x="{{mark1.x}}" y="{{mark1.y}}" class="max" direction="all">
+                <image class="" src="../../image/markcutter/cuterrBg.png"></image>
+                1
+            </movable-view>
+            <movable-view x="{{mark2.x}}" y="{{mark2.y}}" class="max" direction="all">
+                <image class="" src="../../image/markcutter/cuterrBg.png"></image>
+                2
+            </movable-view>
+            <movable-view x="{{mark3.x}}" y="{{mark3.y}}" class="max" direction="all">
+                <image class="" src="../../image/markcutter/cuterrBg.png"></image>
+                3
+            </movable-view>
+        </movable-area>
+    </view>
+    <view class="tip">点击照片可添加标注</view>
+</view>
+
+<view class="markCard" >
+    
+</view>
