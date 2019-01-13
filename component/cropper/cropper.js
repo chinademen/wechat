@@ -60,7 +60,7 @@ Component({
       //     _this.initImg( res.tempFilePaths[0]);
       //   }
       // })
-      this.triggerEvent("getCropperImg", { url: '../../image/main/zheng.png' })
+      this.triggerEvent("getCropperImg", { url: null })
     },
     rotate() {
       let _this = this;

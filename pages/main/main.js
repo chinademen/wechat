@@ -1,7 +1,7 @@
 
 Page({
   data: {
-    currentPage:1, 
+    currentPage:2, 
   },
   changePage(e){
     this.setData({

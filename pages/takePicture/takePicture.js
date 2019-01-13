@@ -10,12 +10,23 @@ Component({
   data: {
     ratio: 102 / 152,
     originUrl: '',
-    cropperResult: "../../image/main/zheng.png",
-    currentPage: 2
+    currentResule: '',
+    cropperResultZheng: {
+      url: "../../image/main/zheng.png",
+      show: false
+    },
+    cropperResultBei: {
+      url: "../../image/main/zheng.png",
+      show: false
+    },
+    currentPage: 2,
+    photoList:[]
   },
   methods: {
-    uploadTap() {
-      let _this = this
+    uploadTap(e) {
+
+      let _this = this;
+      const { pos } = e.currentTarget.dataset;
       wx.chooseImage({
         count: 1, // 默认9
         sizeType: ['original'], // 可以指定是原图还是压缩图，默认二者都有
@@ -23,20 +34,38 @@ Component({
         success(res) {
           _this.setData({
             originUrl: res.tempFilePaths[0],
-            cropperResult: ''
+            currentResule: pos
           })
         }
       })
     },
     getCropperImg(e) {
+      const { currentResule, } = this.data;
       if (e.detail.url) {
+        if (currentResule == "1") {
+          this.setData({
+            originUrl: '',
+            cropperResultZheng: {
+              url: e.detail.url,
+              show: true
+            }
+          })
+        } else if (currentResule == "2") {
+          this.setData({
+            originUrl: '',
+            cropperResultBei: {
+              url: e.detail.url,
+              show: true
+            }
+          })
+        }
+      } else {
         this.setData({
           originUrl: '',
-          cropperResult: e.detail.url
         })
       }
     },
-    changePage(){
+    changePage() {
       this.triggerEvent("changePage", { path: 3 })
     }
   }

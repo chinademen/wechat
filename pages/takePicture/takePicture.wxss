@@ -67,10 +67,23 @@
     height: 112rpx;
     margin-top: 50rpx;
 } */
+.takePhotoMain .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50rpx;
+}
+.takePhotoMain .chonpaiBtn{
+    width: 306rpx;
+    height: 112rpx;
+}
+.takePhotoMain .biaozhuBtn{
+    width: 234rpx;
+    height: 112rpx;
+}
 .takePhotoMain .beimianBtn,.zhengmianBtn{
     width: 418rpx;
     height: 112rpx;
-    margin-top: 50rpx;
 }
 .takePhotoMain .gengduo{
     width: 478rpx;
@@ -87,6 +100,10 @@
     height: 90rpx;
     color: #fff;
     border-radius: 90rpx;
+}
+.takePhotoMain>.list>.addPhoto{
+    width: 137rpx;
+    height: 137rpx;
 }
 .cropper{
     position: fixed;
