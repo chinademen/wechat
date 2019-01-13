@@ -3,7 +3,7 @@
   <view class="homeMain">
     <image class="homeBanner" src="../../image/home/banner.png"></image>
     <view class="homeMeun">
-      <view class="homeMeun_rule" bindtap="bindViewTap">
+      <view class="homeMeun_rule" bindtap="showModal2">
         <image class="homeMeun_rule_img" src="../../image/home/rule.png"></image>
         <span>规则</span>
       </view>

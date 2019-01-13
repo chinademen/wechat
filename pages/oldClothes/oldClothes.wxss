@@ -18,6 +18,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .mainViewBox>.table>.table_cell>span{
     color: #7e7e7e;
@@ -32,7 +33,17 @@
     width: 216rpx;
     height: 216rpx;
 }
+.mainViewBox>.table>.table_cell>.round>input{
+    position: absolute;
+    bottom: 120rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 88rpx;
+    color: #806458;
+    height:auto;
 
+}
 .linxing{
     padding: 60rpx 0rpx;
 }
@@ -71,6 +82,11 @@
     overflow: hidden;
     position: relative;
 }
+.scroll-view-item_H.active {
+    background-color: #806458;
+}
+
+
 .scroll-view-item_H>image{
     position: absolute;
     width: 235rpx;

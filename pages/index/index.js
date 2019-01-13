@@ -79,6 +79,11 @@ Page({
   hideModal1: function () {
     this.setData({
       hideModal1: true,
+    })
+  },
+  // 显示遮罩层
+  showModal2: function () {
+    this.setData({
       hideModal2: false
     })
   },
