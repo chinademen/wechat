@@ -1,2 +1,11 @@
-<!--pages/turnStyle/turnStyle.wxml-->
-<text>pages/turnStyle/turnStyle.wxml</text>
+<view class="turnStyle">
+    <image class="banner" src="../../image/main/sureStyleBg.png"></image>
+    <view class="title">
+        <span>圆领</span>
+        <span>140/68</span>
+    </view>
+    <view class="dec">(点击标签可重新选择)</view>
+</view>
+<view class="turnStyleBtn" >
+    <button bindtap='changePage'> 翻改制作完成 </button>
+</view>

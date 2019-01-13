@@ -26,6 +26,6 @@
         </view>
     </view>
     <view class="address_btn">
-        <button>生成订单</button>
+        <button bindtap='changePage'>生成订单</button>
     </view>
 </view>

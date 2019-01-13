@@ -32,6 +32,6 @@
         <p>预计改衣周期为2-3周</p>
     </view>
     <view class="sureOrder_btn">
-        <button>付款</button>
+        <button bindtap='changePage'>付款</button>
     </view>
 </view>

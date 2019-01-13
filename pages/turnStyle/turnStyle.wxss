@@ -1,1 +1,41 @@
-/* pages/turnStyle/turnStyle.wxss */
+.turnStyle{
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid rgb(227,227,227);
+    text-align: center;
+}
+.turnStyle .banner{
+    width: 473rpx;
+    height: 473rpx;
+}
+.turnStyle>.title{
+    text-align: left;
+    padding: 0 50rpx;
+}
+.turnStyle>.title>span{
+    font-size: 22rpx;
+    color: #fff;
+    padding: 2rpx 16rpx;
+    border-radius: 20rpx;
+    background-color: rgb(128, 100, 88);
+    margin-right: 33rpx;
+}
+.turnStyle>.dec{
+    font-size: 29rpx;
+    color: #cacaca;
+    padding: 0 50rpx;
+    text-align: left;
+    margin-top: 28rpx;
+}
+.turnStyleBtn{
+    margin: 80rpx 0;
+}
+.turnStyleBtn>button{
+    background-color: rgb(128, 100, 88);
+    box-shadow: 0rpx 5rpx 24rpx 0rpx rgba(153, 153, 153, 0.36);
+    width: 550rpx;
+    height: 90rpx;
+    margin: 0 auto;
+    font-size: 34rpx;
+    color: #fff;
+    border-radius: 90rpx;
+}
