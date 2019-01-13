@@ -1,3 +1,4 @@
+let observerList = []
 Component({
   properties: {
     url: {
@@ -20,11 +21,15 @@ Component({
       show: false
     },
     currentPage: 2,
-    photoList:[]
+    photoList: []
   },
   methods: {
+    navigateGo(){
+      wx.navigateTo({
+        url: '../mark/mark'
+      })
+    },  
     uploadTap(e) {
-
       let _this = this;
       const { pos } = e.currentTarget.dataset;
       wx.chooseImage({
@@ -67,6 +72,22 @@ Component({
     },
     changePage() {
       this.triggerEvent("changePage", { path: 3 })
+    },
+    handleReadImg() {
+      let _this = this
+      wx.chooseImage({
+        count: 1, // 默认9
+        sizeType: ['original'], // 可以指定是原图还是压缩图，默认二者都有
+        sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+        success(res) {
+          const url = res.tempFilePaths[0];
+          observerList.push(url);
+          console.log(observerList)
+          _this.setData({
+            photoList:observerList
+          })
+        }
+      })
     }
   }
 })

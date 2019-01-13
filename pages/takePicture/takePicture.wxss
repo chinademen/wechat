@@ -101,9 +101,40 @@
     color: #fff;
     border-radius: 90rpx;
 }
+.takePhotoMain>.list{
+    width: 685rpx;
+    overflow: hidden;
+}
+
+.takePhotoMain>.list>.listContent{
+    width: 137rpx;
+    height: 137rpx;
+    float: left;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.takePhotoMain>.list>.listContent>.bg{
+    width: 137rpx;
+    height: 137rpx;
+    position: absolute;
+    z-index:-1;
+}
+.takePhotoMain>.list>.listContent>.item{
+    width: 111rpx;
+    height: 111rpx;
+    margin: 13rpx;
+    border-radius: 12rpx;
+}
 .takePhotoMain>.list>.addPhoto{
     width: 137rpx;
     height: 137rpx;
+    float: left;
+    display: inherit;
+}
+.takePhotoMain>.list>.hide{
+    display: none;
 }
 .cropper{
     position: fixed;

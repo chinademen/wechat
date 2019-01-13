@@ -8,32 +8,36 @@
         <view class="photoBox">
             <image class="zhengmian" src="{{ cropperResultZheng.url }}"></image>
         </view>
-        <view wx:if="{{!cropperResultZheng.show}}" class="btn"  bindtap='uploadTap'  data-pos="1">
+        <view wx:if="{{!cropperResultZheng.show}}" class="btn" bindtap='uploadTap' data-pos="1">
             <image class="zhengmianBtn" src="../../image/main/btn1.png"></image>
         </view>
         <view wx:else class="btn">
-            <image bindtap='uploadTap'  data-pos="1" class="chonpaiBtn" src="../../image/main/cpzm.png"></image>
-            <image class="biaozhuBtn" src="../../image/main/biaozhu.png"></image>
+            <image bindtap='uploadTap' data-pos="1" class="chonpaiBtn" src="../../image/main/cpzm.png"></image>
+            <image bindtap='navigateGo' class="biaozhuBtn" src="../../image/main/biaozhu.png"></image>
         </view>
     </view>
     <view class="takePhotoMain">
         <view class="photoBox" hover-class="none" hover-stop-propagation="false">
             <image class="beimian" src="{{cropperResultBei.url}}"></image>
         </view>
-        <view class="btn" wx:if="{{!cropperResultBei.show}}"  bindtap='uploadTap'  data-pos="2">
+        <view class="btn" wx:if="{{!cropperResultBei.show}}" bindtap='uploadTap' data-pos="2">
             <image class="beimianBtn" src="../../image/main/btn2.png"></image>
         </view>
-        <view wx:else class="btn"   data-pos="2">
+        <view wx:else class="btn" data-pos="2">
             <image bindtap='uploadTap' class="chonpaiBtn" src="../../image/main/cpbm.png"></image>
-            <image class="biaozhuBtn" src="../../image/main/biaozhu.png"></image>
+            <image bindtap='navigateGo' class="biaozhuBtn" src="../../image/main/biaozhu.png"></image>
         </view>
     </view>
     <view class="takePhotoMain">
-        <image  wx:if="{{!photoList.length}}" class="gengduo" src="../../image/main/btn3.png"></image>
-        <view wx:else class="list" >
-             <image class="addPhoto" src="../../image/main/add.png"></image>
+        <image bindtap='handleReadImg' wx:if="{{!photoList.length}}" class="gengduo" src="../../image/main/btn3.png"></image>
+        <view wx:else class="list">
+            <view class="listContent" wx:for="{{photoList}}" wx:key="{{item}}">
+                <image class="bg" src="../../image/main/xjbg.png"></image>
+                <image class="item" src="{{item}}"></image>
+            </view>
+            <image bindtap='handleReadImg' class="{{ photoList.length>=10?'addPhoto hide':'addPhoto' }}" src="../../image/main/add.png"></image>
         </view>
-        <view class="word">（若您的旧衣上有瑕疵破洞请拍摄更多照片，以便参考）</view>
+        <view class="word">（若您的旧衣上有瑕疵破洞请拍摄更多照片，以便参考）{{photoList.length}}</view>
     </view>
     <view class="takePhotoMain">
         <button bindtap='changePage'>下一步</button>

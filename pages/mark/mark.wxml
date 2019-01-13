@@ -24,11 +24,11 @@
              </span>
              <span class="btn" >
                  删除
-             </span>
+             </span> 
          </view>   
          <input class="input" bindinput="bindKeyInput" placeholder-style="color:#cacaca" type="text" placeholder="请填写详情内容" />
     </view>
 </view>
 <view class="markBtn" >
-    <button> 确认提交 </button>
+    <button bindtap='naviGoBack'> 确认提交 </button>
 </view>
