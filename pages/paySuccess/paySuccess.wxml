@@ -25,6 +25,6 @@
     </view>
     <view class="pay_content">
         <p>改衣时间预计为2-3周,请您耐心等待</p>
-        <button>完成</button>
+        <button bindtap='toOrder'>完成</button>
     </view>
 </view>

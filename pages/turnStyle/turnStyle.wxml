@@ -6,19 +6,17 @@
     </view>
     <view class="title">
         <span bindtap='handleModelShow'>圆领</span>
-        <span bindtap='handleXionShow'>140/68</span>
+        <span bindtap='handleXionShow'>{{size}}</span>
     </view>
     <view class="dec">(点击标签可重新选择)</view>
 </view>
 <view hidden="{{modelShow}}" class="turnStyleContent">
     <h3>尺码范围</h3>
     <view class="turnStyleContentSpan">
-        <span>110/56</span>
-        <span>120/60</span>
-        <span>130/64</span>
-        <span>140/68</span>
-        <span>150/72</span>
-        <span>160/76</span>
+
+<block wx:for="{{sizeRange}}">
+  <span bindtap="changeSize" data-size="{{item}}" class="{{size == item ?'active':''}}">{{item}}</span>
+</block>
     </view>
     <view class="turnStyleContentP">
         <p>尺码数据</p>

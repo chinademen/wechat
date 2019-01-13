@@ -1,0 +1,77 @@
+<view class="container">
+
+  <view class="userinfo">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+
+    <view class='info'>
+      <text>{{userInfo.nickName}}</text>
+
+      <text class='score'>积分:{{score}}</text>
+
+    </view>
+
+
+  </view>
+  <view class="order_title">
+    <view bindtap="statusTap" class="status-label {{index == currentType ? 'active' : ''}}" wx:for-items="{{statusType}}" wx:key="{{index}}" data-index="{{index}}">
+      <view>
+        <text>{{item}}</text>
+        <view class="{{index == currentType ? 'line' : ''}}"></view>
+      </view>
+    </view>
+  </view>
+  <view class="no-order" hidden="{{orderList ? true : false}}">
+    <image src="/image/icon/no-order.png" class="no-order-img"></image>
+    <view class="text">暂无订单</view>
+  </view>
+</view>
+<view class="order_list">
+  <block wx:for="{{orderList}}">
+    <view bindtap="order_info" data-id="{{item.id}}">
+      <view class="order_info">
+        <view class="rel">
+          <image mode="aspectFill" src="{{url}}{{item.img}}"></image>
+        </view>
+        <view class="info">
+          <view>
+            <text>翻改样式</text>
+            <text class="status">已付款</text>
+          </view>
+          <view>{{item.closths_size}}</view>
+
+          <view>
+            <text class='money'>￥{{item.money}}</text>
+            <text class='score'>({{item.score}}积分)</text>
+          </view>
+        </view>
+        <view class="order_state rel">
+          <view class="status">
+
+            <block>
+              <block wx:if="{{item.status==1}}">
+                <view class='btn-1'>付款</view>
+              </block>
+            </block>
+            <block>
+              <block wx:if="{{item.status==2}}">
+                <view class='btn-2'>填写快递单号</view>
+              </block>
+            </block>
+            <block>
+              <block wx:if="{{item.status==3}}">
+                <view class='btn-2'>修改快递单号</view>
+              </block>
+            </block>
+
+
+            <block>
+              <block wx:if="{{item.status>0}}">
+                <view class='btn-2' bindtap="cancelOrderTap" data-id="{{item.id}}">取消订单</view>
+              </block>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
