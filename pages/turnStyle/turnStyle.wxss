@@ -6,7 +6,33 @@
 .turnStyle .banner{
     width: 473rpx;
     height: 473rpx;
+    position: relative;
+    margin: 0 auto;
 }
+.turnStyle .banner .title{
+    position: absolute;
+    width: 80rpx;
+    height: 80rpx;
+    top: 50rpx;
+    right: 50rpx;
+}
+.turnStyle .banner .mian{
+    width: 400rpx;
+    height: 400rpx;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.turnStyle .bannerImg{
+    position: absolute;
+    z-index: -1;
+    width: 473rpx;
+    height: 473rpx;
+    left: 0;
+    right: 0;
+}
+
 .turnStyle>.title{
     text-align: left;
     padding: 0 50rpx;
@@ -27,15 +53,170 @@
     margin-top: 28rpx;
 }
 .turnStyleBtn{
-    margin: 80rpx 0;
+    margin: 0 0 80rpx 0;
 }
 .turnStyleBtn>button{
     background-color: rgb(128, 100, 88);
     box-shadow: 0rpx 5rpx 24rpx 0rpx rgba(153, 153, 153, 0.36);
     width: 550rpx;
     height: 90rpx;
-    margin: 0 auto;
+    margin: 50rpx auto 0;
     font-size: 34rpx;
     color: #fff;
     border-radius: 90rpx;
 }
+.turnStyleContent{
+    padding: 70rpx 0;
+}
+.turnStyleContent>h3{
+    font-size: 40rpx;
+    color: #363636;
+    padding-left: 50rpx;
+}
+.turnStyleContentSpan{
+    overflow: hidden;
+    margin: 0 auto;
+}
+.turnStyleContentSpan>span{
+    float: left;
+    border-width: 1rpx;
+    border-color: rgb(126, 126, 126);
+    border-style: solid;
+    border-radius: 35rpx;
+    width: 178rpx;
+    height: 69rpx;
+    color: #7e7e7e;
+    font-size: 30rpx;
+    text-align: center;
+    line-height:69rpx ;
+    margin: 35rpx 35rpx 0;
+}
+.turnStyleContentP{
+    margin-top: 35rpx;
+}
+.turnStyleContentP>p{
+    text-align: center;
+    display: block;
+    font-size: 26rpx;
+    color: #cacaca;
+}
+.mainViewBox{
+    padding: 60rpx 40rpx;
+    border-bottom: 1px solid #e3e3e3;
+}
+.mainViewBox>.h3{
+    font-size: 40rpx;
+    color: #363636;
+    margin-bottom: 70rpx;
+}
+.mainViewBox>.table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainViewBox>.table>.table_cell{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.mainViewBox>.table>.table_cell>span{
+    color: #7e7e7e;
+    font-size: 26rpx;
+}
+.mainViewBox>.table>.table_cell>.round{
+    border-radius: 50%;
+    width: 216rpx;
+    height: 216rpx;
+}
+.mainViewBox>.table>.table_cell>.round>image{
+    width: 216rpx;
+    height: 216rpx;
+}
+.mainViewBox>.table>.table_cell>.round>input{
+    position: absolute;
+    bottom: 120rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 88rpx;
+    color: #806458;
+    height:auto;
+
+}
+.linxing{
+    padding: 60rpx 0rpx;
+}
+.linxing>.h3{
+    padding: 0rpx 50rpx;
+}
+.mainInput>.table>.table_cell>.round{
+    border-radius: 50%;
+    width: 358rpx;
+    height: 358rpx;
+}
+.mainInput>.table>.table_cell>.round>image{
+    width: 358rpx;
+    height: 358rpx;
+}
+
+.scroll-view_H{
+    white-space: nowrap;
+}
+.scroll-view-item_b{
+    display: inline-block;
+    margin: 0 20rpx;
+}
+.scroll-view-item_b>.word{
+    color: #f3ba5e;
+    font-size: 26rpx;
+    text-align: center;
+    margin-top: 18rpx;
+}
+.scroll-view-item_H {
+    border-radius: 50%;
+    background-color: rgb(240, 229, 214);
+    box-shadow: 0px 0px 1rpx 0rpx rgba(128, 100, 88, 0.7);
+    width: 283rpx;
+    height: 282rpx;
+    overflow: hidden;
+    position: relative;
+}
+.scroll-view-item_H.active {
+    background-color: #806458;
+}
+
+
+.scroll-view-item_H>image{
+    position: absolute;
+    width: 235rpx;
+    height: 293rpx;
+    top: 90rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.mainBtn{
+    padding-bottom: 70rpx;
+}
+
+.mainBtn>button{
+    background-color: rgb(128, 100, 88);
+    box-shadow: 0px 7px 25px 0px rgba(158, 129, 116, 0.5);
+    width: 550rpx;
+    height: 90rpx;
+    border: none;
+    border-radius: 90rpx;
+    font-size: 34rpx;
+    color: #fff;
+}
+.mainBtn>.word{
+    font-size: 26rpx;
+    color: #cacaca;
+    text-align: center;
+    margin: 10rpx 0 40rpx 0;
+}
+  

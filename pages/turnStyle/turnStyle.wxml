@@ -1,11 +1,67 @@
 <view class="turnStyle">
-    <image class="banner" src="../../image/main/sureStyleBg.png"></image>
+    <view class="banner" hover-class="none" hover-stop-propagation="false">
+        <image class="bannerImg" src="../../image/main/sureStyleBg.png"></image>
+        <image class="mian" src="../../image/main/example.png"></image>
+        <image bindtap='nativeGo' class="title" src="../../image/main/cima.png"></image>
+    </view>
     <view class="title">
-        <span>圆领</span>
-        <span>140/68</span>
+        <span bindtap='handleModelShow'>圆领</span>
+        <span bindtap='handleXionShow'>140/68</span>
     </view>
     <view class="dec">(点击标签可重新选择)</view>
 </view>
-<view class="turnStyleBtn" >
-    <button bindtap='changePage'> 翻改制作完成 </button>
+<view hidden="{{modelShow}}" class="turnStyleContent">
+    <h3>尺码范围</h3>
+    <view class="turnStyleContentSpan">
+        <span>110/56</span>
+        <span>120/60</span>
+        <span>130/64</span>
+        <span>140/68</span>
+        <span>150/72</span>
+        <span>160/76</span>
+    </view>
+    <view class="turnStyleContentP">
+        <p>尺码数据</p>
+        <p>胸围:34.5cm; 身长:43.5cm; 袖长:52.5cm; 肩宽:28.5cm</p>
+    </view>
+</view>
+<view hidden="{{XionShow}}" class="mainViewBox linxing">
+    <view class="gender h3">领型</view>
+    <view class="choose table">
+        <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+            <view class="scroll-view-item_b" bindtap='changeModel' data-index='1'>
+                <view class="{{ model==1?'active scroll-view-item_H bc_v':'scroll-view-item_H bc_v' }}">
+                    <image class="notActive" src="../../image/main/v.png"></image>
+                </view>
+                <view class="word">V领</view>
+            </view>
+            <view class="scroll-view-item_b" bindtap='changeModel' data-index='2'>
+                <view class="{{ model==2?'active scroll-view-item_H bc_v':'scroll-view-item_H bc_v' }}">
+                    <image class="notActive" src="../../image/main/b.png"></image>
+                </view>
+                <view class="word">圆领</view>
+            </view>
+            <view class="scroll-view-item_b" bindtap='changeModel' data-index='3'>
+                <view class="{{ model==3?'active scroll-view-item_H bc_v':'scroll-view-item_H bc_v' }}">
+                    <image class="notActive" src="../../image/main/yi.png"></image>
+                </view>
+                <view class="word">半高领</view>
+            </view>
+            <view class="scroll-view-item_b" bindtap='changeModel' data-index='4'>
+                <view class="{{ model==4?'active scroll-view-item_H bc_v':'scroll-view-item_H bc_v' }}">
+                    <image class="notActive" src="../../image/main/y.png"></image>
+                </view>
+                <view class="word">樽领</view>
+            </view>
+            <view class="scroll-view-item_b" bindtap='changeModel' data-index='5'>
+                <view class="{{ model==5?'active scroll-view-item_H bc_v':'scroll-view-item_H bc_v' }}">
+                    <image class="notActive" src="../../image/main/z.png"></image>
+                </view>
+                <view class="word">一字领</view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
+<view class="turnStyleBtn">
+    <button bindtap='changePage'>翻改制作完成</button>
 </view>

@@ -1,16 +1,13 @@
 {
   "pages":[
-    
-    
+    "pages/index/index",
     "pages/main/main",
     "pages/writeAddress/writeAddress",
-    "pages/index/index",
     "pages/mark/mark",
     "pages/login/login",
     "pages/paySuccess/paySuccess",
     "pages/oldClothes/oldClothes",
     "pages/rule/rule"
-   
   ],
   "window":{
     "backgroundTextStyle":"light",
