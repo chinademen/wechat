@@ -2,7 +2,6 @@
   "pages":[
     "pages/index/index",
     "pages/main/main",
-    "pages/index/index",
     "pages/mark/mark",
     "pages/login/login",
     "pages/paySuccess/paySuccess",
