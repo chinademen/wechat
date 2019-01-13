@@ -1,0 +1,19 @@
+<view class="writeAddressInput">
+    <view class="writeAddressContent">
+        <span>收货人</span>
+        <input type="text" placeholder-style="color:#cacaca;font-size:30rpx;" placeholder="请输入收货人真实姓名" />
+    </view>
+    <view class="writeAddressContent">
+        <span>手机号</span>
+        <input type="text" placeholder-style="color:#cacaca;font-size:30rpx;" placeholder="请输入收货人手机号" />
+    </view>
+    <view class="writeAddressContent">
+        <span>收货时间</span>
+        <p> 周一到周五收货 均可 </p>
+    </view>
+</view>
+<view class="writeAddressTextarea">
+    <span> 详细地址 </span>
+    <textarea name="" placeholder-style="color:#cacaca;font-size:30rpx;" placeholder="请输入详细收货地址" ></textarea>
+</view>
+

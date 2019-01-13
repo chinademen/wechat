@@ -1,6 +1,9 @@
 {
   "pages":[
+    
+    
     "pages/main/main",
+    "pages/writeAddress/writeAddress",
     "pages/index/index",
     "pages/mark/mark",
     "pages/login/login",

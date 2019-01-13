@@ -20,7 +20,7 @@
         </view>
         <text class="address_tip">邮寄完成后需自行在“我的订单”中填写订单号</text>
         <h3> 收货地址 </h3>
-        <view class="wirte" >
+        <view class="wirte" bindtap='nativeGo'>
             <span> 请填写你的收货地址 </span>
             <image src="../../image/main/more.png"></image>
         </view>

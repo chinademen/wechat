@@ -1,0 +1,38 @@
+.writeAddressInput{
+    background: #f8f8f8;
+    padding:  40rpx 0  40rpx  0;
+    overflow: hidden;
+}
+.writeAddressContent{
+    background: #fff;
+    display: flex;
+    padding: 38rpx 30rpx;
+    align-items: center;
+}
+.writeAddressContent>span{
+    font-size: 30rpx;
+    color: #363636;
+    margin-right: 30rpx;
+}
+.writeAddressContent>input{
+    color:#cacaca;
+    font-size:30rpx;
+}
+.writeAddressContent>p{
+    font-size: 30rpx;
+    color: #ff8ab4;
+}
+.writeAddressContent:nth-child(2){
+    border-top: 1rpx solid rgb(227,227,227);
+    border-bottom: 1rpx solid rgb(227,227,227);
+}
+.writeAddressTextarea{
+    display: flex;
+    font-size: 30rpx;
+    padding:  40rpx 30rpx;
+}
+.writeAddressTextarea>span{
+    color: #363636;
+    margin-right: 30rpx;
+    width: 135rpx;
+}
