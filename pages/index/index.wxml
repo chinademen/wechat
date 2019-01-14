@@ -3,17 +3,17 @@
   <view class="homeMain">
     <image class="homeBanner" src="../../image/home/banner.png"></image>
     <view class="homeMeun">
-      <view class="homeMeun_rule" bindtap="showModal2">
+      <view class="homeMeun_rule" bindtap="toggleModal2">
         <image class="homeMeun_rule_img" src="../../image/home/rule.png"></image>
         <span>规则</span>
       </view>
-      <view class="homeMeun_order">
+      <view class="homeMeun_order" bindtap="toOrder">
         <image class="homeMeun_order_img" src="../../image/home/order.png"></image>
         <span>订单</span>
       </view>
     </view>
     <view class="homeBtn">
-      <button class="tip" bindtap="showModal1">活动介绍</button>
+      <button class="tip" bindtap="toggleModal1">活动介绍</button>
       <button class="btn" bindtap="next">填写我的旧衣信息</button>
       <image class="homeLogo" src="../../image/home/logo.png"></image>
       <view class="word">服务细则：目前改衣服仅受理含有“鄂尔多斯”、“ERDOS”、和“鄂尔多斯1980”标识的成人羊绒衫</view>
@@ -29,7 +29,8 @@
   </view>
 </view>
 <!-- 弹框1 -->
-<view class="modals modals1" hidden="{{hideModal1}}">
+<view class="modals {{isShow1 ? 'visible' : ''}}">
+<view class='modals1 anim'>
   <image src="../../image/home/modal1.png"></image>
   <view class="title">活动介绍</view>
   <view class="content">
@@ -37,9 +38,11 @@
       “1117要一起”作为鄂尔多斯1980品牌一年一度的家庭日，以“大衣焕小衣”为“家”延续一份冬日的温暖。将历久弥新的温暖代代传承。由“衣”开始，“要一起”，一起传递温暖，传递“时光之礼”。
     </text>
   </view>
-  <view class="button" bindtap="hideModal1">确认</view>
+  <view class="button" bindtap="toggleModal1">确认</view>
+  </view>
 </view>
-<view class="modals modals2" hidden="{{hideModal2}}">
+<view class="modals {{isShow2 ? 'visible' : ''}}" >
+<view class='modals2 anim'>
   <image src="../../image/home/modal2.png"></image>
   <view class="title">改衣规则和注意事项</view>
   <view class="content">
@@ -51,5 +54,6 @@
     5、为减少对旧衣的破坏，改衣以裁剪码边的方
     </text>
   </view>
-  <view class="button" bindtap="hideModal2">确认</view>
+  <view class="button" bindtap="toggleModal2">确认</view>
+  </view>
 </view>

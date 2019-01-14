@@ -1,178 +1,206 @@
-.home{
+.home {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
 }
-.homeBg{
+
+.homeBg {
   width: 100%;
   height: 100%;
 }
-.homeMain{
+
+.homeMain {
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
 }
-.homeBanner{
+
+.homeBanner {
   width: 100%;
   height: 100%;
 }
-.homeMeun{
+
+.homeMeun {
   position: absolute;
   right: 40rpx;
   top: 40rpx;
   display: flex;
   align-content: center;
 }
-.homeMeun>view{
+
+.homeMeun>view {
   display: flex;
   flex-direction: column;
   align-content: center;
   text-align: center;
 }
-.homeMeun>view>span{
+
+.homeMeun>view>span {
   color: #806458;
   font-size: 16rpx;
   margin-top: 20rpx;
 }
-.homeMeun_rule{
+
+.homeMeun_rule {
   margin-right: 44rpx;
 }
-.homeMeun_rule_img{
+
+.homeMeun_rule_img {
   width: 30rpx;
   height: 32rpx;
 }
-.homeMeun_order_img{
+
+.homeMeun_order_img {
   width: 32rpx;
   height: 32rpx;
 }
-.homeBtn{
+
+.homeBtn {
   width: 100%;
   position: absolute;
   bottom: 50rpx;
   left: 0;
   text-align: center;
 }
-.homeBtn>.tip{
-    border-radius: 19rpx;
-    background-color: rgb(128, 100, 88);
-    opacity: 0.659;
-    box-shadow: 0rpx 7rpx 25rpx 0rpx rgba(158, 129, 116, 0.5);
-    width: 143rpx;
-    height: 38rpx;
-    font-size: 26rpx;
-    color: #fff;
-    line-height: 38rpx;
-    padding: 0;
-    margin-bottom: 20rpx;
+
+.homeBtn>.tip {
+  border-radius: 19rpx;
+  background-color: rgb(128, 100, 88);
+  opacity: 0.659;
+  box-shadow: 0rpx 7rpx 25rpx 0rpx rgba(158, 129, 116, 0.5);
+  width: 143rpx;
+  height: 38rpx;
+  font-size: 26rpx;
+  color: #fff;
+  line-height: 38rpx;
+  padding: 0;
+  margin-bottom: 20rpx;
 }
-.homeBtn>.btn{
-    background-color: rgb(128, 100, 88);
-    box-shadow: 0rpx 7rpx 25rpx 0rpx rgba(158, 129, 116, 0.5);
-    width: 550rpx;
-    height: 90rpx;
-    border-radius: 90rpx;
-    color: #fff;
-    font-size: 34rpx;
-    margin-bottom: 50rpx;
+
+.homeBtn>.btn {
+  background-color: rgb(128, 100, 88);
+  box-shadow: 0rpx 7rpx 25rpx 0rpx rgba(158, 129, 116, 0.5);
+  width: 550rpx;
+  height: 90rpx;
+  border-radius: 90rpx;
+  color: #fff;
+  font-size: 34rpx;
+  margin-bottom: 50rpx;
 }
-.homeBtn>.homeLogo{
+
+.homeBtn>.homeLogo {
   width: 114rpx;
   height: 89rpx;
   margin-bottom: 20rpx;
 }
 
-.homeBtn>.word{
+.homeBtn>.word {
   font-size: 12rpx;
   color: #7a6458;
   text-align: center;
 }
 
-
 .fixed>view:nth-child(1) {
-width:100%;
-height:100%;
-top:0;
-background:#000;
-opacity:.5;
-
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: #000;
+  opacity: 0.5;
 }
 
 .authorization>.content {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .ab {
-    position: absolute;
+  position: absolute;
 }
 
 .authorization {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 50000000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 50000000;
 }
 
 .authorization>view:nth-child(2) {
-    width: 70%;
-    height: 400rpx;
-    background: #fff;
-    border-radius: 15rpx;
-    text-align: center;
+  width: 70%;
+  height: 400rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  text-align: center;
 }
 
 .authorization>view icon {
-    margin-top: 60rpx;
-    margin-bottom: 50rpx;
+  margin-top: 60rpx;
+  margin-bottom: 50rpx;
 }
 
 .authorization button {
-    width: 60%;
-    height: 80rpx;
-    background: #09BB07;
-    color: #fff;
-    margin-top: 30rpx;
-    font-size: 28rpx;
-    line-height:80rpx;
-
+  width: 60%;
+  height: 80rpx;
+  background: #09bb07;
+  color: #fff;
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  line-height: 80rpx;
 }
 
 .authorization button::after {
-    border: none;
+  border: none;
 }
 
-.modals{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+.modals {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
 }
-.modals>.title{
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.modals .title {
   text-align: center;
   line-height: 150rpx;
   color: #fff;
   font-size: 30rpx;
 }
-.modals>image{
+
+.modals image {
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: -1;
 }
-.modals>.content{
+
+.modals .content {
   font-size: 30rpx;
   color: #806458;
-  padding:0rpx 70rpx;
+  padding: 0rpx 70rpx;
 }
-.modals>.button{
+
+.modals .button {
   background-color: rgb(128, 100, 88);
   width: 210rpx;
   height: 68rpx;
@@ -184,12 +212,35 @@ opacity:.5;
   border-radius: 68rpx;
 }
 
-
-.modals1{
+.modals1 {
   width: 578rpx;
   height: 647rpx;
+    margin: 150rpx auto;
 }
-.modals2{
+
+.modals2 {
   width: 750rpx;
   height: 939rpx;
+    margin: 100rpx auto;
+}
+
+
+.modals1, .modals2 {
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  transition: transform 0.3s;
+  position: relative;
+
+}
+
+
+.anim {
+  -webkit-transform: translateY(-160px);
+  transform: translateY(-160px);
+}
+
+.visible .anim {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
 }

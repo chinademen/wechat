@@ -76,7 +76,7 @@
         </view>
     </view>
     <view class="mainViewBox mainInput">
-        <view class="gender h3">胸围与身长</view>
+        <view class="gender h3"><text>胸围与身长</text><span bindtap="toggleModal">尺码图示</span></view>
         <view class="choose table">
             <view class="table_cell">
                 <view class="round">
@@ -96,4 +96,12 @@
         <view class="word">请正确填写全部信息</view>
         <button bindtap='changePage'>下一页</button>
     </view>
+
+
+</view>
+<view class="modals {{isShow ? 'visible' : ''}}" >
+<view class='dimensionModal anim'>
+  <image src="../../image/main/dimension.png"></image>
+  <view class="button" bindtap="toggleModal">确认</view>
+  </view>
 </view>

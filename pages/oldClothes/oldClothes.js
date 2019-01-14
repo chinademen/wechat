@@ -24,6 +24,12 @@ Component({
       this.setData({
         model:Number( e.currentTarget.dataset.index )
       })
+    },
+    toggleModal: function () {
+      console.log(1111)
+      this.setData({
+        isShow: !this.data.isShow
+      })
     }
   }
 })

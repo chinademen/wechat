@@ -70,27 +70,22 @@ Page({
     })
   },
   // 显示遮罩层
-  showModal1: function () {
+  toggleModal1: function () {
     this.setData({
-      hideModal1: false
+      isShow1: !this.data.isShow1
     })
   },
   // 隐藏遮罩层
-  hideModal1: function () {
+  toggleModal2: function () {
     this.setData({
-      hideModal1: true,
+      isShow2: !this.data.isShow2
     })
   },
-  // 显示遮罩层
-  showModal2: function () {
-    this.setData({
-      hideModal2: false
-    })
+  toOrder: function () {
+    wx.reLaunch({
+      url: "/pages/order/order"
+    });
   },
-  // 隐藏遮罩层
-  hideModal2: function () {
-    this.setData({
-      hideModal2: true
-    })
-  },
+
+
 })
