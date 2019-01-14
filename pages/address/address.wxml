@@ -2,27 +2,31 @@
     <addressContent></addressContent>
     <view class="address_radio">
         <h3>寄送方式</h3>
-        <radio-group class="radio">
+        <radio-group class="radio" bindchange="changeRadio">
             <label>
-                <radio value="自行快递" checked="a" />
+                <radio value="自行快递" checked="{{checked == 1?true:false}}" value='1' />
                 自行快递
             </label>
             <label>
-                <radio value="门店提交" checked="b" />
+                <radio value="门店提交" checked="{{checked == 2?true:false}}" value='2' />
                 门店提交
             </label>
         </radio-group>
     </view>
     <view class="address_detail">
-        <view class="address_gc">
-            <text class="">工厂地址:</text>
-            <text class=""> 北京市西城区西单北街176号汉光百货6层鄂尔多斯专柜汉光男装厅</text>
+        <view hidden="{{checked == 1}}">
+            <view class="address_gc" wx:for="{{getStoreList}}" wx:key="index" wx:for-item="item">
+                <text class="">工厂地址:</text>
+                <text class="">{{item.address}}</text>
+            </view>
+            <text class="address_tip">邮寄完成后需自行在“我的订单”中填写订单号</text>
         </view>
-        <text class="address_tip">邮寄完成后需自行在“我的订单”中填写订单号</text>
-        <h3> 收货地址 </h3>
-        <view class="wirte" bindtap='nativeGo'>
-            <span> 请填写你的收货地址 </span>
-            <image src="../../image/main/more.png"></image>
+        <view hidden="{{checked == 2}}">
+            <h3>收货地址</h3>
+            <view class="wirte" bindtap='nativeGo'>
+                <span>请填写你的收货地址</span>
+                <image src="../../image/main/more.png"></image>
+            </view>
         </view>
     </view>
     <view class="address_btn">

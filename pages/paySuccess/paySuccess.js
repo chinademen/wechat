@@ -8,7 +8,7 @@ Page({
 
   },
   toOrder: function() {
-    wx.reLaunch({
+    wx.navigateTo({
       url: "/pages/order/order"
     });
   },

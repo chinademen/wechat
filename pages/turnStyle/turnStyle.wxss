@@ -20,8 +20,8 @@
 }
 
 .turnStyle .banner .mian {
-  width: 400rpx;
-  height: 400rpx;
+  width: 300rpx;
+  height: 300rpx;
   position: absolute;
   left: 50%;
   top: 50%;

@@ -2,8 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/main/main",
-    "pages/writeAddress/writeAddress",
     "pages/mark/mark",
+    "pages/writeAddress/writeAddress",
     "pages/login/login",
     "pages/paySuccess/paySuccess",
     "pages/oldClothes/oldClothes",
