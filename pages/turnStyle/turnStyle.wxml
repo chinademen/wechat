@@ -2,7 +2,7 @@
     <view class="banner" hover-class="none" hover-stop-propagation="false">
         <image class="bannerImg" src="../../image/main/sureStyleBg.png"></image>
         <image class="mian" src="../../image/main/example.png"></image>
-        <image bindtap='nativeGo' class="title" src="../../image/main/cima.png"></image>
+        <image bindtap='toggleModal' class="title" src="../../image/main/cima.png"></image>
     </view>
     <view class="title">
         <span bindtap='handleModelShow'>圆领</span>
@@ -60,6 +60,12 @@
         </scroll-view>
     </view>
 </view>
+<view class="modals {{isShow ? 'visible' : ''}}">
+  <view class='sizeModal anim'>
+    <image src="../../image/main/size.png" bindtap="toggleModal"></image>
+  </view>
+</view>
+
 <view class="turnStyleBtn">
     <button bindtap='changePage'>翻改制作完成</button>
 </view>

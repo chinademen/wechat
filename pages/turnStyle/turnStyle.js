@@ -38,9 +38,9 @@ Component({
         XionShow:false
       })
     },
-    nativeGo(){
-      wx.navigateTo({
-        url: '../rule/rule'
+    toggleModal: function () {
+      this.setData({
+        isShow: !this.data.isShow
       })
     }
   }
