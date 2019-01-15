@@ -3,6 +3,10 @@ Component({
 
   },
   methods: {
-
+    nativeGo(){
+      wx.navigateTo({
+        url: '../sureStyle/sureStyle'
+      })
+    }
   }
 })

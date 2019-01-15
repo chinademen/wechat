@@ -1,0 +1,43 @@
+<view class="sureStyleContent">
+    <image class="bg" src="../../image/sureStyle/sureStyleBg.png"></image>
+    <image class="example" src="../../image/sureStyle/example.png"></image>
+</view>
+<view class="sureStyleClothes" >
+    <view class="oldClothes" >
+        <h3> 旧衣 </h3>
+        <view class="list" >
+            <span> 旧衣服款式 : </span>
+            <span> 圆领女套衫 </span>
+        </view>
+        <view class="list" >
+            <span> 胸围大于 : </span>
+            <span> 43cm </span>
+        </view>
+        <view class="list" >
+            <span> 身长大于 : </span>
+            <span> 54cm </span>
+        </view>
+    </view>
+    <view class="newClothes" >
+        <h3> 改衣 </h3>
+        <view class="list" >
+            <span> 款式 : </span>
+            <span> 圆领女套衫 </span>
+        </view>
+        <view class="list" >
+            <span> 尺码 : </span>
+            <span> 130/64 </span>
+        </view>
+    </view>
+</view>
+<view class="sureStyleMoney" >
+    <h3> <span> ￥ </span> 300 </h3>
+    <p> （可用积分兑换，当前可用积分:3000） </p>
+</view>
+<view class="sureStyleTextarea" >
+    <h3> 备注内容 </h3>
+    <textarea placeholder="可填写，建议您填写对订单的其他要求(100字内)" name="" id="" ></textarea>
+</view>
+<view class="sureStyleBtn" >
+    <button bindtap="naviGoBack"> 填写订单信息 </button>
+</view>

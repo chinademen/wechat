@@ -8,5 +8,5 @@
             <i>(3000积分)</i>
         </span>
     </view>
-    <image src="../../image/main/btn.png"></image>
+    <image bindtap="nativeGo" src="../../image/main/btn.png"></image>
 </view>

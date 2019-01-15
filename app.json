@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/main/main",
+    "pages/sureStyle/sureStyle",
+    "pages/index/index",
     "pages/mark/mark",
     "pages/writeAddress/writeAddress",
     "pages/login/login",
