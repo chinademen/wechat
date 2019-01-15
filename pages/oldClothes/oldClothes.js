@@ -68,7 +68,7 @@ Component({
 
       if (!this.data.oldChest || !this.data.oldLength){
         wx.showToast({
-          title: '填写完整后才能提交',
+          title: '胸围尺码范围40-100cm，衣长尺码范围51-100cm',
           icon: 'none',
           duration: 1000
         });
@@ -106,7 +106,7 @@ Component({
       const value = Number(e.detail.value);
       if (value && (value < 40 || value > 100)) {
         wx.showToast({
-          title: '胸围【40-100】',
+          title: '胸围尺码范围40-100cm',
           icon: 'none',
           duration: 1000
         });
@@ -123,7 +123,7 @@ Component({
       const value = Number(e.detail.value);
       if (value && (value < 50 || value > 100)) {
         wx.showToast({
-          title: '衣长【51-100】',
+          title: '衣长尺码范围51-100cm',
           icon: 'none',
           duration: 1000
         })

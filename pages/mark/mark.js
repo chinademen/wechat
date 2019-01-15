@@ -5,15 +5,18 @@ Page({
   data: {
     currentTarget:'',
     markList: [],
-    inputValue1: ''
+    inputValue1: '',
+    imgUrl:''
   },
   onLoad(option) {
     const id = option.id
+    const imgUrl = option.imgUrl;
     const storageMarkList = wx.getStorageSync(`markList${id}`);
-    console.log(id)
+    
     this.setData({
       markList: storageMarkList || markList,
-      currentTarget:id
+      currentTarget:id,
+      imgUrl: imgUrl
     });
     
   },
@@ -33,7 +36,7 @@ Page({
       duration: 2000
     });
     wx.setStorageSync(`markList${id}`, this.data.markList)
-    // wx.navigateBack();
+     wx.navigateBack();
   },
   onChange(e) {
     const indx = Number(e.currentTarget.dataset.index);

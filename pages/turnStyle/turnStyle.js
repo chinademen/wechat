@@ -56,44 +56,44 @@ Component({
       {
         id: 1,
         name: 'V领',
-        src: '../../image/main/collar/1.png'
+        src: '../../image/main/model/1.png'
       },
       {
         id: 2,
         name: '圆领',
-        src: '../../image/main/collar/2.png'
+        src: '../../image/main/model/2.png'
       },
       {
         id: 3,
         name: '半高领',
-        src: '../../image/main/collar/3.png'
+        src: '../../image/main/model/3.png'
       },
       {
         id: 4,
         name: '樽领',
-        src: '../../image/main/collar/4.png'
+        src: '../../image/main/model/4.png'
       },
       {
         id: 5,
         name: '一字领',
-        src: '../../image/main/collar/5.png'
+        src: '../../image/main/model/5.png'
       }
     ],
     kaiSanList: [
       {
         id: 6,
         name: 'V领',
-        src: '../../image/main/collar/6.png'
+        src: '../../image/main/model/6.png'
       },
       {
         id: 7,
         name: '圆领',
-        src: '../../image/main/collar/7.png'
+        src: '../../image/main/model/7.png'
       },
       {
         id: 8,
         name: '半高领',
-        src: '../../image/main/collar/8.png'
+        src: '../../image/main/model/8.png'
       }
     ]
   },

@@ -26,8 +26,9 @@ Component({
   methods: {
     navigateGo(e){
       const indx = e.currentTarget.dataset.index
+      const imgUrl = indx == 1 ? this.data.cropperResultZheng.url : this.data.cropperResultBei.url
       wx.navigateTo({
-        url: `../mark/mark?id=${indx}`
+        url: `../mark/mark?id=${indx}&imgUrl=${imgUrl}`
       })
     },  
     uploadTap(e) {
@@ -38,6 +39,7 @@ Component({
         sizeType: ['original'], // 可以指定是原图还是压缩图，默认二者都有
         sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
         success(res) {
+          wx.removeStorage(`markList${pos}`)
           _this.setData({
             originUrl: res.tempFilePaths[0],
             currentResule: pos

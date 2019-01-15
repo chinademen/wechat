@@ -1,7 +1,7 @@
 <view class="mark">
     <view class="markContent">
         <image class="bg" src="../../image/markcutter/bg.png"></image>
-        <image class="orign" src="../../image/markcutter/image.png"></image>
+        <image class="orign" src="{{imgUrl}}"></image>
         <movable-area class="moveArea" bindtap="addMark">
             <movable-view bindchange="onChange" wx:for="{{markList}}" data-index="{{index}}" wx:for-item="item" wx:key="index"
                 x="{{item.x}}" y="{{item.y}}" class="max" direction="all">
