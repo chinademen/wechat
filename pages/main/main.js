@@ -3,8 +3,13 @@ Page({
   data: {
     currentPage:3, 
   },
-  onLoad: function () {
-
+  onLoad: function (option) {
+    const id = option.id
+    if(id){
+      this.setData({
+        currentPage:Number(id)
+      })
+    }
     var formData = wx.getStorageSync("formData");
     if(!formData){
       formData = 

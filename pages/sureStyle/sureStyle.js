@@ -1,5 +1,7 @@
 Page({
     naviGoBack() {
-        wx.navigateBack()
+        wx.navigateTo({
+            url: '../main/main?id=4'
+        })
     },
 })
