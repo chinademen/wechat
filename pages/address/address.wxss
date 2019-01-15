@@ -24,6 +24,25 @@
     padding: 30rpx;
     border-bottom: 1rpx solid rgb(227,227,227);
 }
+
+.address_detail .store_list{  display: flex;
+align-items: center;
+    justify-content: center;}
+
+.address_detail .store_list>image{
+  width:13rpx;
+height:23rpx;
+}
+.address_detail .store_list>view{
+
+ font-size: 30rpx;
+    color: #7e7e7e;
+    width: 90%;
+    margin-right:10px; 
+}
+
+
+
 .address_detail .address_gc{
     display: flex;
     margin-bottom: 30rpx;

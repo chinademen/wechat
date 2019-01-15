@@ -4,13 +4,29 @@ Page({
     currentPage:1, 
   },
   onLoad: function () {
+
+    var formData = wx.getStorageSync("formData");
+    if(!formData){
+      formData = 
+        {
+          gender:1,
+          oldStyle:1,
+          oldModel: 1,
+          oldChest: '',
+          oldLength: ''
+        }
+      wx.setStorageSync("formData", formData);
+    }
     wx.request({
       url: app.url + 'weiapp/api/getStoreList',
+      header: {
+        'content-type': 'application/json'
+      },
       data: {},
       success: function (res) {
         wx.setStorage({
-          key:"getStoreList",
-          data:res.data.data
+          key:"storeLists",
+          data: res.data.data
         })
       }
 

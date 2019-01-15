@@ -1,38 +1,62 @@
-.writeAddressInput{
-    background: #f8f8f8;
-    padding:  40rpx 0  40rpx  0;
-    overflow: hidden;
+.container {
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
 }
-.writeAddressContent{
-    background: #fff;
-    display: flex;
-    padding: 38rpx 30rpx;
-    align-items: center;
+
+.writeAddressInput {
+  padding: 40rpx 0 40rpx 0;
+  overflow: hidden;
 }
-.writeAddressContent>span{
-    font-size: 30rpx;
-    color: #363636;
-    margin-right: 30rpx;
+
+.writeAddressContent {
+  background: #fff;
+  display: flex;
+  padding: 38rpx 30rpx;
+  align-items: center;
 }
-.writeAddressContent>input{
-    color:#cacaca;
-    font-size:30rpx;
+
+.writeAddressContent>span {
+  font-size: 30rpx;
+  color: #363636;
+  margin-right: 30rpx;
 }
-.writeAddressContent>p{
-    font-size: 30rpx;
-    color: #ff8ab4;
+
+.writeAddressContent>input {
+  color: #cacaca;
+  font-size: 30rpx;
 }
-.writeAddressContent:nth-child(2){
-    border-top: 1rpx solid rgb(227,227,227);
-    border-bottom: 1rpx solid rgb(227,227,227);
+
+.writeAddressContent>p {
+  font-size: 30rpx;
+  color: #ff8ab4;
 }
-.writeAddressTextarea{
-    display: flex;
-    font-size: 30rpx;
-    padding:  40rpx 30rpx;
+
+.writeAddressContent:nth-child(2) {
+  border-top: 1rpx solid rgb(227, 227, 227);
+  border-bottom: 1rpx solid rgb(227, 227, 227);
 }
-.writeAddressTextarea>span{
-    color: #363636;
-    margin-right: 30rpx;
-    width: 135rpx;
+
+.writeAddressTextarea {
+  background: #fff;
+  display: flex;
+  font-size: 30rpx;
+  padding: 40rpx 30rpx;
+}
+
+.writeAddressTextarea>span {
+  color: #363636;
+  margin-right: 30rpx;
+  width: 135rpx;
+}
+
+.submitBtn>button {
+  background-color: rgb(128, 100, 88);
+  box-shadow: 0rpx 5rpx 24rpx 0rpx rgba(153, 153, 153, 0.36);
+  width: 550rpx;
+  height: 90rpx;
+  color: #fff;
+  border-radius: 90rpx;
+  font-size: 34rpx;
+  margin: 35rpx auto 60rpx;
 }

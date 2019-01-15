@@ -4,9 +4,9 @@
         <view class="money">
             <p>
                 <!-- <span>￥</span> -->
-                56.84 
+                300
             </p>
-            <p>使用积分:56.84</p>
+            <p>使用积分:0</p>
         </view>
         <view class="content">
             <image bindtap='uploadTap' class="zhengmianBtn" src="../../image/pay/exap.png"></image>

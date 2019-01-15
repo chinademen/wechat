@@ -13,11 +13,11 @@ Component({
     originUrl: '',
     currentResule: '',
     cropperResultZheng: {
-      url: "../../image/main/zheng.png",
+      url: "",
       show: false
     },
     cropperResultBei: {
-      url: "../../image/main/zheng.png",
+      url: "",
       show: false
     },
     currentPage: 2,
@@ -72,6 +72,25 @@ Component({
       }
     },
     changePage() {
+      var positivePhoto = this.data.cropperResultZheng.url;
+      var backPhoto = this.data.cropperResultBei.url;
+
+      if (!positivePhoto || !backPhoto) {
+        wx.showToast({
+          title: '请先上传旧衣照片',
+          icon: 'none',
+          duration: 1000
+        });
+        return;
+      }
+
+      var formData = wx.getStorageSync("formData");
+      formData.positivePhoto = positivePhoto;
+      formData.backPhoto = backPhoto;
+      wx.setStorageSync("formData", formData);
+
+
+
       this.triggerEvent("changePage", { path: 3 })
     },
     handleReadImg() {

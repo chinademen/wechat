@@ -15,13 +15,25 @@
     </view>
     <view class="address_detail">
         <view hidden="{{checked == 1}}">
-            <view class="address_gc" wx:for="{{getStoreList}}" wx:key="index" wx:for-item="item">
-                <text class="">工厂地址:</text>
-                <text class="">{{item.address}}</text>
-            </view>
-            <text class="address_tip">邮寄完成后需自行在“我的订单”中填写订单号</text>
+
+        <picker bindchange="changeStore" value="{{index}}" range="{{storeList.stores}}">
+    <view class="store_list">
+                <view class="">{{storeList.storeAddress[index]}}</view><image src="../../image/main/more.png"></image>
+    </view>
+  </picker>
+
+
+           
+
+            
         </view>
         <view hidden="{{checked == 2}}">
+          <view class="address_gc">
+            <text class="">工厂地址:</text>
+            <text class=""> 北京市昌平区科技园区永安路47号鄂尔多斯公司 \n胡兵 大衣焕小衣 收   18701213392</text>
+        </view>
+        <text class="address_tip">邮寄完成后需自行在“我的订单”中填写订单号</text>
+
             <h3>收货地址</h3>
             <view class="wirte" bindtap='nativeGo'>
                 <span>请填写你的收货地址</span>

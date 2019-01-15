@@ -1,8 +1,9 @@
 
 Component({
   data: {
-    getStoreList:wx.getStorageSync("getStoreList"),
+    storeList: wx.getStorageSync("storeLists"),
     checked:1 , // 1 快递 2 门店
+    index:0
   },
 
   methods: {
@@ -18,6 +19,12 @@ Component({
       this.setData({
         checked:Number(e.detail.value)
       })
+    },
+    changeStore(e){
+      this.setData({
+        index: e.detail.value
+      })
     }
+    
   }
 })

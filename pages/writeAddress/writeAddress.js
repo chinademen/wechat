@@ -7,7 +7,7 @@ Page({
   data: {
 
   },
-  nativeBack(){
+  addAddress(){
     wx.navigateBack()
   },
   /**

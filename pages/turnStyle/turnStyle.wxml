@@ -1,6 +1,6 @@
 <view class="turnStyle">
     <view class="banner" hover-class="none" hover-stop-propagation="false">
-        <image class="bannerImg" src="../../image/main/sureStyleBg.png"></image>
+        <image class="bannerImg" src="{{positivePhoto}}"></image>
         <image class="mian" src="{{nowCloth}}"></image>
         <image bindtap='toggleModal' class="title" src="../../image/main/cima.png"></image>
     </view>
@@ -29,8 +29,8 @@
     <view class="choose table">
         <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
 
-            <view class="scroll-view-item_b" wx:for="{{taoSanList}}" bindtap='changeModel' wx:for-item="item" wx:key="index" data-index='{{index}}'>
-                <view class="{{ model==index?'active scroll-view-item_H bc_v':'scroll-view-item_H bc_v' }}">
+            <view class="scroll-view-item_b" wx:for="{{oldStyle==1?taoSanList:kaiSanList}}" bindtap='changeModel' wx:for-item="item" wx:key="index" data-index='{{item.id}}'>
+                <view class="{{ model==item.id?'active scroll-view-item_H bc_v':'scroll-view-item_H bc_v' }}">
                     <image class="notActive" src="{{item.src}}"></image>
                 </view>
                 <view class="word">{{item.name}}</view>

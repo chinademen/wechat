@@ -28,7 +28,7 @@
         </radio-group>
     </view>
     <view class="sureOrder_tip" hidden="{{checked == 2}}">
-        <p>您现有2000积分，此次交易将使用2000积分抵扣</p>
+        <p>您现有0积分，此次交易将使用6000积分抵扣</p>
         <p>预计改衣周期为2-3周</p>
     </view>
     <view class="sureOrder_tip" hidden="{{checked == 1}}">

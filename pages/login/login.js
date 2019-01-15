@@ -12,13 +12,19 @@ Page({
     wx.setStorageSync("userInfo", res.userInfo)
     wx.request({
       url: baseUrl + 'weiapp/api/saveUserInfo',
+      header: {
+        'content-type': 'application/json'
+      },
       data: {
         iv: res.iv,
         encryptedData: res.encryptedData,
         PHPSESSID: wx.getStorageSync('PHPSESSID')
       },
       success: function (res) {
+     
+
         var data = res.data.data;
+           console.log(data)
         wx.setStorageSync('mobile',data.mobile);
         wx.setStorageSync('score', data.score);
         wx.navigateTo({

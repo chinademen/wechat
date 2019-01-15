@@ -1,3 +1,4 @@
+<view class="container">
 <view class="writeAddressInput">
     <view class="writeAddressContent">
         <span>收货人</span>
@@ -15,5 +16,13 @@
 <view class="writeAddressTextarea">
     <span> 详细地址 </span>
     <textarea name="" placeholder-style="color:#cacaca;font-size:30rpx;" placeholder="请输入详细收货地址" ></textarea>
+</view>
+
+
+
+<view class="submitBtn" >
+    <button bindtap='addAddress'>提交 </button>
+</view>
+
 </view>
 

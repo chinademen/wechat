@@ -5,7 +5,7 @@
         <span>圆领套衫,130/64</span>
         <span>
             ￥300
-            <i>(3000积分)</i>
+            <i>(0积分)</i>
         </span>
     </view>
     <image bindtap="nativeGo" src="../../image/main/btn.png"></image>

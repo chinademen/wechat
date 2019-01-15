@@ -6,7 +6,7 @@
 <view wx:else class="mainContent takePhoto">
     <view class="takePhotoMain">
         <view class="photoBox">
-            <image class="zhengmian" src="{{ cropperResultZheng.url }}"></image>
+            <image class="zhengmian" src="{{ cropperResultZheng.url? cropperResultZheng.url :'../../image/main/zheng.png' }}"></image>
         </view>
         <view wx:if="{{!cropperResultZheng.show}}" class="btn" bindtap='uploadTap' data-pos="1">
             <image class="zhengmianBtn" src="../../image/main/btn1.png"></image>
@@ -18,7 +18,7 @@
     </view>
     <view class="takePhotoMain">
         <view class="photoBox" hover-class="none" hover-stop-propagation="false">
-            <image class="beimian" src="{{cropperResultBei.url}}"></image>
+            <image class="beimian" src="{{cropperResultBei.url?cropperResultBei.url:'../../image/main/bei.png'}}"></image>
         </view>
         <view class="btn" wx:if="{{!cropperResultBei.show}}" bindtap='uploadTap' data-pos="2">
             <image class="beimianBtn" src="../../image/main/btn2.png"></image>
