@@ -44,5 +44,5 @@
     </view>
 </view>
 <view class="turnStyleBtn">
-    <button bindtap='changePage'>翻改制作完成</button>
+    <button bindtap='nativeGo'>翻改制作完成</button>
 </view>

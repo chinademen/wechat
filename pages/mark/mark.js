@@ -1,9 +1,9 @@
 
 
-let markList =  []
+let markList = []
 Page({
   data: {
-    currentTarget:'',
+    currentTarget: '',
     markList: [],
     inputValue1: '',
     imgUrl:''
@@ -12,7 +12,6 @@ Page({
     const id = option.id
     const imgUrl = option.imgUrl;
     const storageMarkList = wx.getStorageSync(`markList${id}`);
-    
     this.setData({
       markList: storageMarkList || markList,
       currentTarget:id,

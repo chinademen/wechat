@@ -107,8 +107,13 @@ Component({
     })
   },
   methods: {
-    changePage() {
-      this.triggerEvent("changePage", { path: 4 })
+    // changePage() {
+    //   this.triggerEvent("changePage", { path: 4 })
+    // },
+    nativeGo(){
+      wx.navigateTo({
+        url: '../sureStyle/sureStyle'
+      })
     },
     changeModel(e) {
       const id = Number(e.currentTarget.dataset.index);

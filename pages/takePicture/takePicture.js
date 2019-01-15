@@ -24,13 +24,13 @@ Component({
     photoList: []
   },
   methods: {
-    navigateGo(e){
+    navigateGo(e) {
       const indx = e.currentTarget.dataset.index
       const imgUrl = indx == 1 ? this.data.cropperResultZheng.url : this.data.cropperResultBei.url
       wx.navigateTo({
         url: `../mark/mark?id=${indx}&imgUrl=${imgUrl}`
       })
-    },  
+    },
     uploadTap(e) {
       let _this = this;
       const { pos } = e.currentTarget.dataset;
@@ -39,7 +39,7 @@ Component({
         sizeType: ['original'], // 可以指定是原图还是压缩图，默认二者都有
         sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
         success(res) {
-          wx.removeStorage(`markList${pos}`)
+          wx.removeStorage({key:`markList${pos}`})
           _this.setData({
             originUrl: res.tempFilePaths[0],
             currentResule: pos
@@ -49,6 +49,7 @@ Component({
     },
     getCropperImg(e) {
       const { currentResule, } = this.data;
+      var formData = wx.getStorageSync("formData");
       if (e.detail.url) {
         if (currentResule == "1") {
           this.setData({
@@ -57,7 +58,8 @@ Component({
               url: e.detail.url,
               show: true
             }
-          })
+          });
+          formData.positivePhoto = e.detail.url;
         } else if (currentResule == "2") {
           this.setData({
             originUrl: '',
@@ -66,12 +68,14 @@ Component({
               show: true
             }
           })
+          formData.backPhoto = e.detail.url;
         }
       } else {
         this.setData({
           originUrl: '',
         })
       }
+      wx.setStorageSync("formData", formData);
     },
     changePage() {
       var positivePhoto = this.data.cropperResultZheng.url;
@@ -91,8 +95,6 @@ Component({
       formData.backPhoto = backPhoto;
       wx.setStorageSync("formData", formData);
 
-
-
       this.triggerEvent("changePage", { path: 3 })
     },
     handleReadImg() {
@@ -106,7 +108,7 @@ Component({
           observerList.push(url);
           console.log(observerList)
           _this.setData({
-            photoList:observerList
+            photoList: observerList
           })
         }
       })
