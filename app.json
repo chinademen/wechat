@@ -1,9 +1,10 @@
 {
   "pages": [
+   
     "pages/main/main",
     "pages/index/index",
-   
     "pages/mark/mark",
+    
     "pages/sureStyle/sureStyle",
     
     "pages/writeAddress/writeAddress",

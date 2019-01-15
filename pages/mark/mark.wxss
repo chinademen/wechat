@@ -115,5 +115,10 @@
     font-size: 34rpx;
     margin: 35rpx auto 60rpx;
 }
-  
+.imgcrop{
+    width:598rpx;
+    height: 598rpx;
+    color: #fff;
+    display: none;
+}
 

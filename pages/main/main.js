@@ -1,7 +1,7 @@
 const app = getApp()
 Page({
   data: {
-    currentPage:3, 
+    currentPage:2, 
   },
   onLoad: function (option) {
     const id = option.id

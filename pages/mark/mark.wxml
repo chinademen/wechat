@@ -2,9 +2,9 @@
     <view class="markContent">
         <image class="bg" src="../../image/markcutter/bg.png"></image>
         <image class="orign" src="{{imgUrl}}"></image>
-        <movable-area class="moveArea" bindtap="addMark">
-            <movable-view bindchange="onChange" wx:for="{{markList}}" data-index="{{index}}" wx:for-item="item" wx:key="index"
-                x="{{item.x}}" y="{{item.y}}" class="max" direction="all">
+        <movable-area class="moveArea" bindtap="addMark" animation="false">
+            <movable-view bindchange="onChange" wx:for="{{markList}}" data-index="{{index}}" wx:for-item="item" wx:key="index" x="{{item.x}}"
+                y="{{item.y}}" class="max" direction="all">
                 <image class="" src="../../image/markcutter/cuterrBg.png"></image>
                 {{index+1}}
                 <!-- <view wx:if="{{ !item.inputValue }}" class="tip"> {{item.inputValue}} </view> -->
@@ -27,12 +27,11 @@
                 删除
             </span>
         </view>
-        <input class="input" value="{{item.inputValue}}" bindinput="bindKeyInput" data-index="{{index}}"
-            placeholder-style="color:#cacaca" type="text" placeholder="请填写详情内容" />
+        <input class="input" value="{{item.inputValue}}" bindinput="bindKeyInput" data-index="{{index}}" placeholder-style="color:#cacaca"
+            type="text" placeholder="请填写详情内容" />
     </view>
 </view>
-
-
 <view class="markBtn">
     <button bindtap='naviGoBack'> 确认提交 </button>
 </view>
+<canvas class='imgcrop' canvas-id='imgcrop'></canvas>
