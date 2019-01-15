@@ -24,9 +24,10 @@ Component({
     photoList: []
   },
   methods: {
-    navigateGo(){
+    navigateGo(e){
+      const indx = e.currentTarget.dataset.index
       wx.navigateTo({
-        url: '../mark/mark'
+        url: `../mark/mark?id=${indx}`
       })
     },  
     uploadTap(e) {

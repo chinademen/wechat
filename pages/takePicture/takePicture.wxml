@@ -13,7 +13,7 @@
         </view>
         <view wx:else class="btn">
             <image bindtap='uploadTap' data-pos="1" class="chonpaiBtn" src="../../image/main/cpzm.png"></image>
-            <image bindtap='navigateGo' class="biaozhuBtn" src="../../image/main/biaozhu.png"></image>
+            <image bindtap='navigateGo' data-index="1" class="biaozhuBtn" src="../../image/main/biaozhu.png"></image>
         </view>
     </view>
     <view class="takePhotoMain">
@@ -25,7 +25,7 @@
         </view>
         <view wx:else class="btn" data-pos="2">
             <image bindtap='uploadTap' class="chonpaiBtn" src="../../image/main/cpbm.png"></image>
-            <image bindtap='navigateGo' class="biaozhuBtn" src="../../image/main/biaozhu.png"></image>
+            <image bindtap='navigateGo'  data-index="2"  class="biaozhuBtn" src="../../image/main/biaozhu.png"></image>
         </view>
     </view>
     <view class="takePhotoMain">

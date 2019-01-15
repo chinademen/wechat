@@ -1,7 +1,7 @@
 const app = getApp()
 Page({
   data: {
-    currentPage:1, 
+    currentPage:2, 
   },
   onLoad: function () {
     wx.request({
