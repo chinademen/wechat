@@ -30,13 +30,28 @@
         <view hidden="{{checked == 2}}">
           <view class="address_gc">
             <text class="">工厂地址:</text>
-            <text class=""> 北京市昌平区科技园区永安路47号鄂尔多斯公司 \n胡兵 大衣焕小衣 收   18701213392</text>
+            <text class=""> 北京市昌平区科技园区永安路47号鄂尔多斯公司 胡兵 大衣焕小衣 收 \n010-89715767,89715778</text>
         </view>
         <text class="address_tip">邮寄完成后需自行在“我的订单”中填写订单号</text>
 
             <h3>收货地址</h3>
             <view class="wirte" bindtap='nativeGo'>
-                <span>请填写你的收货地址</span>
+
+            <block wx:if="{{!formData.telephone}}">
+             <span>请填写你的收货地址</span>
+            </block>
+            <block wx:if="{{formData.telephone}}">
+
+            <view class="address_info">
+            <view class="">
+                <span class="name">{{formData.consignee}}</span>
+                <span class="photo">{{formData.telephone}}</span>
+            </view>
+            <p class="">{{formData.address}}</p>
+            <!-- <p>收货时间不限</p> -->
+        </view>
+            </block>
+               
                 <image src="../../image/main/more.png"></image>
             </view>
         </view>

@@ -94,3 +94,18 @@ height:23rpx;
     font-size: 34rpx;
 }
   
+.address_info{
+    background: #f8f8f8;
+    padding: 30rpx;
+    color: #7e7e7e;
+    font-size: 30rpx;
+    width:90%;
+
+}
+.address_info>p{
+    display: block;
+    margin-top: 30rpx;
+}
+.address_info .name{
+    margin-right: 60rpx;
+}

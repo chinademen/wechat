@@ -1,4 +1,4 @@
-// pages/order.js
+const app = getApp()
 Page({
 
   /**
@@ -8,26 +8,7 @@ Page({
     userInfo: null,
     statusType: ["全部", "待接收", "未成功", "已接收"],
     currentType: 0,
-    orderList: [
-      {
-        "id": "146",
-        "price": "0.01",
-        "money": "56.12",
-        "socre": "56.12",
-        "closths_size": "圆领套衫、130/64",
-        "img": "https://erdos.alex90.cn/closths/img-1.png",
-        "status":"1"
-      },
-      {
-        "id": "146",
-        "price": "0.01",
-        "money": "56.12",
-        "socre": "56.12", 
-        "closths_size": "圆领套衫、130/64",
-        "img": "https://erdos.alex90.cn/closths/img-1.png",
-        "status": "2"
-      }
-    ]
+    orderList: ''
   },
   statusTap: function (e) {
     wx.showToast({
@@ -49,7 +30,7 @@ Page({
       content: '',
       success: function (res) {
         if (res.confirm) {
-          wx.showLoading();
+          // wx.showLoading();
         }
       }
     })
@@ -61,13 +42,40 @@ Page({
     var userInfo = wx.getStorageSync('userInfo');
     var score = wx.getStorageSync('score');
     var activeIndex =0;
+    var that = this;
    
     this.setData({
       userInfo:userInfo,
       score: score,
       activeIndex: activeIndex
     })
-    // wx.showLoading();
+
+    wx.showLoading();
+
+    wx.request({
+      url: app.url + 'weiapp/api/getOrderList',
+      header: {
+        'content-type': 'application/json'
+      },
+      data: {
+        PHPSESSID: wx.getStorageSync('PHPSESSID')
+      },
+      success: function (res) {
+
+        wx.hideLoading();
+        if (res.data.data){
+         that.setData({
+           orderList: res.data.data,
+         })
+       }
+       
+      }
+
+    })
+
+
+
+    // 
   },
 
   /**

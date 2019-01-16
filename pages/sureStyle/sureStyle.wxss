@@ -19,7 +19,7 @@
 }
 
 .sureStyleClothes{
-    padding: 40rpx 0 40rpx 56rpx;
+    padding: 40rpx 0 40rpx 20rpx;
     display: flex;
 }
 .sureStyleClothes>view{
@@ -58,6 +58,7 @@
 .oldClothes{
     border-bottom: 1rpx solid rgb(227, 227, 227);
     padding-bottom: 40rpx;
+    margin-right: 15rpx;
 }
 .sureStyleMoney{
     padding: 0 0 40rpx 56rpx;

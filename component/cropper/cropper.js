@@ -1,4 +1,5 @@
 // component/cropper/cropper.js
+const app = getApp()
 const device = wx.getSystemInfoSync();
 var twoPoint = {
   x1: 0,
@@ -106,9 +107,27 @@ Component({
         wx.canvasToTempFilePath({
           canvasId: 'imgcrop',
           success(response) {
-            console.log(response.tempFilePath);
-            _this.triggerEvent("getCropperImg", { url: response.tempFilePath })
-            wx.hideLoading();
+            const url = response.tempFilePath;
+            wx.uploadFile({
+              url: app.url + 'weiapp/Api/upload&PHPSESSID=' + wx.getStorageSync('PHPSESSID'),
+              filePath: url,
+              name: 'download',
+              header: { "Content-Type": "multipart/form-data" },
+              success: function (res) {
+                const data =  JSON.parse(res.data)
+                _this.triggerEvent("getCropperImg", { url: data.data.url })
+                wx.hideLoading();
+              },
+              fail: function (res) {
+                console.log('上传图片到服务器失败')
+              },
+              complete: function (res) {
+                console.log(res)
+              }
+            })
+
+
+     
           },
           fail(e) {
             console.log(e);
@@ -127,7 +146,7 @@ Component({
       wx.getImageInfo({
         src: url,
         success(resopne) {
-          console.log(resopne);
+        
           let innerAspectRadio = resopne.width / resopne.height;
 
           if (innerAspectRadio < _this.data.width / _this.data.height) {

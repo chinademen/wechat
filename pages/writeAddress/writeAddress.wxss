@@ -23,11 +23,11 @@
 }
 
 .writeAddressContent>input {
-  color: #cacaca;
+  color: #363636;
   font-size: 30rpx;
 }
 
-.writeAddressContent>p {
+.writeAddressContent p {
   font-size: 30rpx;
   color: #ff8ab4;
 }

@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    formData:'',
+    styles: ['套衫', '开衫'],
+    models: ['V领', '圆领', '半高领', '樽领', '一字领', 'V领', '圆领', '半高领']
   },
   toOrder: function() {
     wx.navigateTo({
@@ -16,7 +18,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    var formData = wx.getStorageSync("formData");
+    this.setData({
+      formData: formData
+    })
   },
 
   /**

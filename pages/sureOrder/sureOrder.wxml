@@ -2,23 +2,34 @@
     <addressContent></addressContent>
     <view class="send_type">
         <h3>寄送方式</h3>
+        <block wx:if="{{formData.senType == 1}}">
         <p>自行快递</p>
         <view class="send_gc">
             <text class="">工厂地址:</text>
-            <text class="">北京市昌平区科技园区永安路47号鄂尔多斯公司 胡兵 18701213392</text>
+            <text class="">北京市昌平区科技园区永安路47号鄂尔多斯公司 胡兵 大衣焕小衣 收 \n010-89715767,89715778</text>
         </view>
         <h3>收货地址</h3>
         <view class="send_sh">
             <view class="">
-                <span class="name">李三</span>
-                <span class="photo">159*****253</span>
+                <span class="name">{{formData.consignee}}</span>
+                <span class="photo">{{formData.telephone}}</span>
             </view>
-            <p class="">北京市西城区西单北街176号汉光百货6层鄂尔多斯专柜汉光男装厅</p>
-            <p>收货时间不限</p>
+            <p class="">{{formData.address}}</p>
+            <p>收货时间{{timeReceipt[formData.timeReceipt]}}</p>
+       
         </view>
+        </block> 
+<block wx:if="{{formData.senType == 2}}">
+          <p>门店提交</p>
+        <view class="send_gc">
+            <text class="">门店地址:</text>
+            <text class="">{{formData.storeAddress}}</text>
+        </view>
+
+ </block>
         <radio-group class="send_radio"  bindchange="changeRadio">
             <label>
-                <radio value="积分抵扣" checked="{{checked == 1?true:false}}" value='1' />
+             <radio value="积分抵扣" disabled="{{score<6000?true:false}}" checked="{{checked == 1?true:false}}" value='1' />
                 <span>积分抵扣</span>
             </label>
             <label>
@@ -32,9 +43,9 @@
         <p>预计改衣周期为2-3周</p>
     </view>
     <view class="sureOrder_tip" hidden="{{checked == 1}}">
-        <input type="text" placeholder="请在此填写优惠券兑换码" />
+        <input type="text" placeholder="请在此填写优惠券兑换码" bindinput="bindInputInput" />
     </view>
     <view class="sureOrder_btn">
-        <button bindtap='changePage'>付款</button>
+        <button bindtap='changePage'>提交</button>
     </view>
 </view>

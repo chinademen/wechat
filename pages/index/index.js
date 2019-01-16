@@ -5,7 +5,9 @@ Page({
   data: {
     hideModal1: true, //模态框的状态  true-隐藏  false-显示
     hideModal2: true, //模态框的状态  true-隐藏  false-显示
-    showBindPhone: false
+    showBindPhone: false,
+    showRule: wx.getStorageSync("showRule"),
+    goNext:false
   },
   getPhoneNumber: function (e) {
     var that = this;
@@ -21,6 +23,9 @@ Page({
     } else {
       wx.request({
         url: app.url + 'weiapp/api/getPhonenumber',
+        header: {
+          'content-type': 'application/json'
+        },
         data: {
           iv: e.detail.iv,
           encryptedData: e.detail.encryptedData,
@@ -50,15 +55,25 @@ Page({
   //填写旧衣信息
   next: function () {
     var mobile = wx.getStorageSync('mobile');
-    // if (!mobile) {
-    //   this.setData({
-    //     showBindPhone: true
-    //   })
-    // } else {
-    //   wx.navigateTo({
-    //     url: '../main/main'
-    //   })
-    // }
+    if (!mobile) {
+      this.setData({
+        showBindPhone: true
+      })
+    } else {
+      wx.navigateTo({
+        url: '../main/main'
+      })
+    }
+
+    if(!this.data.showRule){
+      this.setData({
+        isShow2: !this.data.isShow2,
+        showRule:true,
+        goNext:true
+      })
+      wx.setStorageSync("showRule", true);
+      return;
+    }
     wx.navigateTo({
       url: '../main/main'
     })
@@ -77,9 +92,19 @@ Page({
   },
   // 隐藏遮罩层
   toggleModal2: function () {
+   
     this.setData({
       isShow2: !this.data.isShow2
     })
+    wx.setStorageSync("showRule", true);
+    if (this.data.goNext) {
+      this.setData({
+        goNext: false
+      })
+      wx.navigateTo({
+        url: '../main/main'
+      })
+    }
   },
   toOrder: function () {
     wx.navigateTo({

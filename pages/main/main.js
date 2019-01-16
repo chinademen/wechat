@@ -1,7 +1,7 @@
 const app = getApp()
 Page({
   data: {
-    currentPage:2, 
+    currentPage:1, 
   },
   onLoad: function (option) {
     const id = option.id
@@ -10,10 +10,9 @@ Page({
         currentPage:Number(id)
       })
     }
-    var formData = wx.getStorageSync("formData");
+    let formData = wx.getStorageSync("formData");
     if(!formData){
-      formData = 
-        {
+      formData = {
           gender:1,
           oldStyle:1,
           oldModel: 1,
@@ -22,20 +21,28 @@ Page({
         }
       wx.setStorageSync("formData", formData);
     }
-    wx.request({
-      url: app.url + 'weiapp/api/getStoreList',
-      header: {
-        'content-type': 'application/json'
-      },
-      data: {},
-      success: function (res) {
-        wx.setStorage({
-          key:"storeLists",
-          data: res.data.data
-        })
-      }
 
-    })
+    const storeLists = wx.getStorageSync("storeLists");
+    if (!storeLists){
+      wx.request({
+        url: app.url + 'weiapp/api/getStoreList',
+        header: {
+          'content-type': 'application/json'
+        },
+        data: {
+          PHPSESSID: wx.getStorageSync('PHPSESSID')
+        },
+        success: function (res) {
+          wx.setStorage({
+            key: "storeLists",
+            data: res.data.data
+          })
+        }
+
+      })
+
+    }
+
   },
   changePage(e){
     this.setData({

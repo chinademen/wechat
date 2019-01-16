@@ -40,7 +40,7 @@
           <view>{{item.closths_size}}</view>
 
           <view>
-            <text class='money'>￥{{item.money}}</text>
+            <text class='money'>￥{{item.price}}</text>
             <text class='score'>({{item.score}}积分)</text>
           </view>
         </view>
@@ -62,8 +62,6 @@
                 <view class='btn-2'>修改快递单号</view>
               </block>
             </block>
-
-
             <block>
               <block wx:if="{{item.status>0}}">
                 <view class='btn-2' bindtap="cancelOrderTap" data-id="{{item.id}}">取消订单</view>

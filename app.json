@@ -1,18 +1,19 @@
 {
   "pages": [
-   
-    "pages/main/main",
+ 
+ 
     "pages/index/index",
+     "pages/main/main",
     "pages/mark/mark",
-    
-    "pages/sureStyle/sureStyle",
-    
     "pages/writeAddress/writeAddress",
+    "pages/sureStyle/sureStyle",
+      "pages/order/order",
+
     "pages/login/login",
     "pages/paySuccess/paySuccess",
     "pages/oldClothes/oldClothes",
-    "pages/rule/rule",
-    "pages/order/order"
+    "pages/rule/rule"
+   
   ],
   "window": {
     "backgroundTextStyle": "light",

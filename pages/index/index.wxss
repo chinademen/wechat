@@ -200,6 +200,10 @@
   padding: 0rpx 70rpx;
 }
 
+.modals2 .content{
+  height: 600rpx;
+}
+
 .modals .button {
   background-color: rgb(128, 100, 88);
   width: 210rpx;

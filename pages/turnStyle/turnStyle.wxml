@@ -1,7 +1,7 @@
 <view class="turnStyle">
     <view class="banner" hover-class="none" hover-stop-propagation="false">
-        <image class="bannerImg" src="{{positivePhoto}}"></image>
-        <image class="mian" src="{{nowCloth}}"></image>
+        <image class="bannerImg" src="{{formData.positivePhoto}}"></image>
+        <image class="mian" src="{{showList[model-1].src}}"></image>
         <image bindtap='toggleModal' class="title" src="../../image/main/cima.png"></image>
     </view>
     <view class="title">
@@ -21,7 +21,7 @@
     </view>
     <view class="turnStyleContentP">
         <p>尺码数据</p>
-        <p>胸围:34.5cm; 身长:43.5cm; 袖长:52.5cm; 肩宽:28.5cm</p>
+        <p>{{tips[size]}}</p>
     </view>
 </view>
 <view hidden="{{XionShow}}" class="mainViewBox linxing">
@@ -29,7 +29,7 @@
     <view class="choose table">
         <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
 
-            <view class="scroll-view-item_b" wx:for="{{oldStyle==1?taoSanList:kaiSanList}}" bindtap='changeModel' wx:for-item="item" wx:key="index" data-index='{{item.id}}'>
+            <view class="scroll-view-item_b" wx:for="{{modelList}}" bindtap='changeModel' wx:for-item="item" wx:key="index" data-index='{{item.id}}'>
                 <view class="{{ model==item.id?'active scroll-view-item_H bc_v':'scroll-view-item_H bc_v' }}">
                     <image class="notActive" src="{{item.src}}"></image>
                 </view>

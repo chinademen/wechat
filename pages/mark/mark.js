@@ -31,15 +31,23 @@ Page({
     const id = this.data.currentTarget;
     const _this = this;
     const dataMarkList = this.data.markList
-    wx.showToast({
-      title: "成功提交",
-      icon: 'success',
-      duration: 2000
-    });
+  
     wx.setStorageSync(`markList${id}`, dataMarkList);
+
+
+    if(!dataMarkList){
+      wx.navigateBack();
+      return false;
+    } 
+    wx.showLoading({
+      title: 'loading',
+      mask: true
+    })
+
     const ctx = wx.createCanvasContext('imgcrop');
     ctx.strokeStyle = '#fff';
-    ctx.drawImage(this.data.imgUrl, 0, 0, 299, 299);
+     ctx.drawImage(this.data.imgUrl, 0, 0, 299, 299);
+    
     for (let i = 0; i < dataMarkList.length; i++) {
       ctx.drawImage("../../image/markcutter/cuterrBg.png", dataMarkList[i].x, dataMarkList[i].y, 29.5, 34.5);
       ctx.strokeText(`${i + 1}`, dataMarkList[i].x + 12, dataMarkList[i].y + 18);
@@ -48,44 +56,34 @@ Page({
       wx.canvasToTempFilePath({
         canvasId: 'imgcrop',
         success(response) {
-          console.log(`canvas生成的图片地址是${response.tempFilePath}`);
+          
           const tempFilePaths = response.tempFilePath
+
+          _this.setData({
+            tempFilePath: tempFilePaths
+        })
           wx.uploadFile({
             url: app.url + 'weiapp/Api/upload&PHPSESSID=' + wx.getStorageSync('PHPSESSID'),
             filePath: tempFilePaths,
             name: 'download',
             header: { "Content-Type": "multipart/form-data" },
             success: function (res) {
-              console.log('上传图片到服务器成功')
+              wx.hideLoading();
+              const data = JSON.parse(res.data)
+              wx.setStorageSync(`markImg${id}`, data.data.url);
+              wx.navigateBack();
             },
             fail: function (res) {
               console.log('上传图片到服务器失败')
             },
             complete: function (res) {
-              console.log(res)
+              
             }
           })
 
         }
       })
     })
-    // wx.canvasToTempFilePath({
-    //   x: 0,
-    //   y: 0,
-    //   width: 500,
-    //   height: 500,
-    //   destWidth: 100,
-    //   destHeight: 100,
-    //   canvasId: 'imgcrop',
-    //   success(res) {
-    //     _this.setData({
-    //       tempFilePath:res.tempFilePath
-    //     })
-    //     console.log(res.tempFilePath)
-    //   }
-    // })
-
-    // wx.navigateBack();
   },
   onChange(e) {
     const indx = Number(e.currentTarget.dataset.index);
@@ -99,11 +97,10 @@ Page({
   },
   addMark(e) {
     const markList = this.data.markList;
-    console.log(e)
     if (markList.length < 3) {
       markList.push({
-        x: e.detail.x - 42,
-        y: e.detail.y - 25,
+        x: e.detail.x,
+        y: e.detail.y,
         inputValue: ''
       });
       this.setData({
@@ -121,6 +118,9 @@ Page({
     const indx = Number(e.currentTarget.dataset.index);
     this.data.markList.splice(indx, 1);
     const markList = this.data.markList;
+    for (let i = 0; i < markList.length; i++) {
+      markList[i].x = markList[i].x+30;
+    }
     this.setData({
       markList: markList
     });

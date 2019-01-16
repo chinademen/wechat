@@ -35,3 +35,4 @@
     <button bindtap='naviGoBack'> 确认提交 </button>
 </view>
 <canvas class='imgcrop' canvas-id='imgcrop'></canvas>
+
